@@ -2,1000 +2,483 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>VINLUMEXZ — Creator Academy</title>
 
-<meta name="description" content="VINLUMEXZ Creator Academy — aprenda criação de conteúdo, TikTok, edição, IA, estratégia e análise.">
-
 <style>
-
 :root{
-    --bg:#050811;
-    --bg2:#080d18;
-    --card:#0c1422;
-    --card2:#101a2b;
-    --border:#202e44;
-    --text:#f5f8ff;
-    --muted:#94a3b8;
-    --cyan:#00e5ff;
-    --purple:#7c5cff;
-    --green:#48e08b;
-    --danger:#ff5577;
-    --shadow:0 20px 60px rgba(0,0,0,.35);
+--bg:#070912;
+--card:#101525;
+--card2:#151c2e;
+--text:#f5f7ff;
+--muted:#9da8bd;
+--cyan:#35e6ff;
+--purple:#8b5cff;
+--line:#252e47;
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
-html{
-    scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:var(--bg);
-    color:var(--text);
-    line-height:1.65;
-}
-
-button,
-input,
-textarea,
-select{
-    font:inherit;
-}
-
-button{
-    cursor:pointer;
+margin:0;
+background:
+radial-gradient(circle at 80% 0%,#19235c 0%,transparent 35%),
+#070912;
+color:var(--text);
+font-family:Arial,sans-serif;
 }
 
 a{
-    color:inherit;
-    text-decoration:none;
+text-decoration:none;
+color:inherit;
 }
 
-/* HEADER */
+button{
+font-family:inherit;
+cursor:pointer;
+}
 
 header{
-    position:fixed;
-    top:0;
-    left:0;
-    right:0;
-    height:72px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 6%;
-    background:rgba(5,8,17,.86);
-    backdrop-filter:blur(18px);
-    border-bottom:1px solid var(--border);
-    z-index:1000;
+position:sticky;
+top:0;
+z-index:20;
+background:#070912ee;
+border-bottom:1px solid var(--line);
+backdrop-filter:blur(15px);
+}
+
+.nav{
+max-width:1150px;
+margin:auto;
+padding:16px 20px;
+display:flex;
+align-items:center;
+gap:25px;
 }
 
 .logo{
-    font-size:23px;
-    font-weight:900;
-    letter-spacing:2px;
-}
-
-.logo span{
-    color:var(--cyan);
+font-size:22px;
+font-weight:900;
+letter-spacing:2px;
+color:var(--cyan);
 }
 
 nav{
-    display:flex;
-    gap:22px;
+margin-left:auto;
+display:flex;
+gap:18px;
 }
 
 nav a{
-    color:#b8c4d8;
-    font-size:14px;
-    transition:.2s;
+color:var(--muted);
+font-size:14px;
 }
 
 nav a:hover{
-    color:var(--cyan);
+color:white;
 }
 
-.menu{
-    display:none;
-    font-size:28px;
+main{
+max-width:1150px;
+margin:auto;
+padding:0 20px;
 }
-
-/* HERO */
 
 .hero{
-    min-height:100vh;
-    padding:150px 7% 90px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    background:
-        radial-gradient(circle at 50% 10%,#123d55 0%,transparent 38%),
-        radial-gradient(circle at 15% 50%,#17133b 0%,transparent 25%),
-        var(--bg);
-}
-
-.hero-content{
-    max-width:1000px;
+padding:90px 0 65px;
+max-width:850px;
 }
 
 .badge{
-    display:inline-block;
-    padding:8px 16px;
-    border:1px solid var(--cyan);
-    color:var(--cyan);
-    border-radius:999px;
-    font-size:13px;
-    margin-bottom:24px;
+display:inline-block;
+padding:8px 13px;
+border:1px solid #33415f;
+border-radius:999px;
+color:var(--cyan);
+background:#10182a;
+font-size:13px;
+font-weight:bold;
 }
 
 .hero h1{
-    font-size:clamp(48px,8vw,90px);
-    line-height:1;
-    margin-bottom:25px;
+font-size:clamp(45px,7vw,80px);
+line-height:.95;
+margin:20px 0;
 }
 
-.gradient{
-    background:linear-gradient(90deg,var(--cyan),var(--purple),var(--cyan));
-    background-size:200%;
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-    animation:gradient 5s linear infinite;
-}
-
-@keyframes gradient{
-    from{background-position:0}
-    to{background-position:200%}
+.hero h1 span{
+color:var(--cyan);
 }
 
 .hero p{
-    max-width:760px;
-    margin:auto;
-    color:var(--muted);
-    font-size:18px;
+font-size:18px;
+line-height:1.7;
+color:var(--muted);
 }
 
-.actions{
-    display:flex;
-    justify-content:center;
-    gap:14px;
-    flex-wrap:wrap;
-    margin-top:35px;
+.buttons{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:25px;
 }
 
 .btn{
-    border:1px solid var(--border);
-    border-radius:11px;
-    padding:13px 21px;
-    transition:.2s;
-    font-weight:700;
+border:0;
+border-radius:12px;
+padding:13px 18px;
+background:linear-gradient(135deg,var(--cyan),var(--purple));
+color:#05070d;
+font-weight:900;
 }
 
-.primary{
-    background:var(--cyan);
-    color:#031016;
-    border-color:var(--cyan);
+.btn.alt{
+background:var(--card2);
+border:1px solid var(--line);
+color:white;
 }
-
-.primary:hover{
-    transform:translateY(-3px);
-    box-shadow:0 15px 35px rgba(0,229,255,.2);
-}
-
-.secondary{
-    background:var(--card);
-}
-
-.secondary:hover{
-    border-color:var(--cyan);
-}
-
-/* GENERAL */
 
 section{
-    padding:95px 7%;
+padding:55px 0;
 }
 
-.dark{
-    background:var(--bg2);
+h2{
+font-size:34px;
+margin:0 0 10px;
 }
 
-.section-title{
-    max-width:850px;
-    margin:0 auto 50px;
-    text-align:center;
-}
-
-.section-title h2{
-    font-size:42px;
-    line-height:1.15;
-    margin-bottom:12px;
-}
-
-.section-title p{
-    color:var(--muted);
+.subtitle{
+color:var(--muted);
+margin:0 0 25px;
+line-height:1.6;
 }
 
 .grid{
-    max-width:1250px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+}
+
+.card,.tool{
+background:linear-gradient(145deg,#11172a,#0d1220);
+border:1px solid var(--line);
+border-radius:18px;
+padding:22px;
 }
 
 .card{
-    padding:25px;
-    border:1px solid var(--border);
-    background:linear-gradient(145deg,var(--card),#09101c);
-    border-radius:18px;
-    transition:.25s;
+transition:.2s;
 }
 
 .card:hover{
-    transform:translateY(-5px);
-    border-color:#35506d;
-    box-shadow:var(--shadow);
-}
-
-.icon{
-    font-size:34px;
-    margin-bottom:13px;
+transform:translateY(-4px);
+border-color:#41527a;
 }
 
 .card h3{
-    margin-bottom:8px;
+margin:12px 0 8px;
 }
 
 .card p{
-    color:var(--muted);
-    font-size:14px;
+color:var(--muted);
+line-height:1.6;
 }
 
-.card button{
-    width:100%;
-    margin-top:18px;
-    padding:11px;
-    border:1px solid var(--border);
-    border-radius:9px;
-    background:#111c2e;
-    color:white;
-}
-
-.card button:hover{
-    border-color:var(--cyan);
-}
-
-/* STATS */
-
-.stats{
-    max-width:1000px;
-    margin:-45px auto 0;
-    position:relative;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:12px;
-    padding:15px;
-    background:#09111e;
-    border:1px solid var(--border);
-    border-radius:18px;
-}
-
-.stat{
-    text-align:center;
-    padding:15px;
-}
-
-.stat strong{
-    display:block;
-    font-size:25px;
-    color:var(--cyan);
-}
-
-.stat span{
-    color:var(--muted);
-    font-size:12px;
-}
-
-/* TOOL */
-
-.tool{
-    max-width:1000px;
-    margin:auto;
-    padding:30px;
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:20px;
-}
-
-.tool-row{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-}
-
-.field{
-    margin-bottom:15px;
-}
-
-.field label{
-    display:block;
-    margin-bottom:7px;
-    font-size:13px;
-    color:#c7d2e5;
-}
-
-input,
-textarea,
-select{
-    width:100%;
-    border:1px solid var(--border);
-    border-radius:10px;
-    background:#070e1a;
-    color:white;
-    padding:13px;
-    outline:none;
+input,textarea{
+width:100%;
+background:#080c16;
+border:1px solid var(--line);
+border-radius:10px;
+padding:13px;
+color:white;
+outline:none;
 }
 
 textarea{
-    min-height:130px;
-    resize:vertical;
+min-height:120px;
+resize:vertical;
 }
 
-input:focus,
-textarea:focus,
-select:focus{
-    border-color:var(--cyan);
+.output{
+margin-top:12px;
+background:#080c16;
+border:1px solid var(--line);
+border-radius:12px;
+padding:15px;
+white-space:pre-wrap;
+line-height:1.6;
+color:#dce4f5;
 }
 
-.result{
-    margin-top:20px;
-    padding:22px;
-    background:#070e1a;
-    border:1px solid var(--border);
-    border-radius:14px;
-    white-space:pre-wrap;
-    color:#cbd6e8;
+.tool{
+margin-bottom:16px;
 }
 
-.result strong{
-    color:var(--cyan);
-}
-
-/* PROGRESS */
-
-.progress-box{
-    max-width:1000px;
-    margin:auto;
-}
-
-.progress-bar{
-    height:12px;
-    background:#111b2a;
-    border-radius:20px;
-    overflow:hidden;
-    margin:20px 0;
-}
-
-.progress-fill{
-    height:100%;
-    width:0%;
-    background:linear-gradient(90deg,var(--cyan),var(--purple));
-    transition:.4s;
-}
-
-/* ROADMAP */
-
-.roadmap{
-    max-width:1000px;
-    margin:auto;
-}
-
-.road{
-    display:flex;
-    gap:20px;
-    padding:23px;
-    margin-bottom:15px;
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:16px;
-}
-
-.road-number{
-    min-width:45px;
-    height:45px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:50%;
-    background:var(--cyan);
-    color:#031016;
-    font-weight:900;
-}
-
-/* CHECKLIST */
-
-.checklist{
-    max-width:850px;
-    margin:auto;
-}
-
-.check{
-    display:flex;
-    gap:13px;
-    align-items:flex-start;
-    padding:15px;
-    margin-bottom:9px;
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:12px;
-}
-
-.check input{
-    width:auto;
-    margin-top:6px;
-    accent-color:var(--cyan);
-}
-
-.check span{
-    color:#b7c3d6;
-}
-
-/* AI */
-
-.ai-shell{
-    max-width:1000px;
-    margin:auto;
-    background:#080f1b;
-    border:1px solid var(--border);
-    border-radius:22px;
-    overflow:hidden;
-    box-shadow:var(--shadow);
-}
-
-.ai-head{
-    padding:20px 24px;
-    border-bottom:1px solid var(--border);
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.ai-dot{
-    width:11px;
-    height:11px;
-    border-radius:50%;
-    background:var(--green);
-    box-shadow:0 0 15px var(--green);
-}
-
-.ai-head small{
-    color:var(--muted);
+.tool .btn{
+margin-top:10px;
 }
 
 .chat{
-    height:450px;
-    overflow-y:auto;
-    padding:25px;
+max-width:850px;
+margin:auto;
 }
 
-.message{
-    max-width:80%;
-    padding:14px 17px;
-    border-radius:14px;
-    margin-bottom:13px;
-    white-space:pre-wrap;
+.messages{
+height:400px;
+overflow:auto;
+background:#080c16;
+border:1px solid var(--line);
+border-radius:16px;
+padding:15px;
 }
 
-.bot{
-    background:#111b2b;
-    border:1px solid var(--border);
-    color:#cbd5e5;
+.msg{
+max-width:85%;
+padding:12px 14px;
+border-radius:13px;
+margin:8px 0;
+line-height:1.55;
+white-space:pre-wrap;
 }
 
-.user{
-    background:#073843;
-    border:1px solid #07596a;
-    margin-left:auto;
+.msg.user{
+margin-left:auto;
+background:#26375f;
 }
 
-.ai-input{
-    padding:17px;
-    border-top:1px solid var(--border);
-    display:flex;
-    gap:10px;
+.msg.ai{
+background:#151c2e;
+border:1px solid var(--line);
 }
 
-.ai-input input{
-    flex:1;
+.chatbar{
+display:flex;
+gap:8px;
+margin-top:10px;
 }
 
-.quick{
-    padding:0 17px 17px;
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
+.chatbar input{
+flex:1;
 }
 
-.quick button{
-    border:1px solid var(--border);
-    background:#101a2a;
-    color:#c7d2e4;
-    border-radius:20px;
-    padding:8px 12px;
+.chatbar button{
+border:0;
+border-radius:10px;
+padding:0 20px;
+background:var(--cyan);
+font-weight:900;
 }
 
-/* FAQ */
+.progress{
+height:10px;
+background:#080c16;
+border:1px solid var(--line);
+border-radius:99px;
+overflow:hidden;
+}
+
+.progress span{
+display:block;
+height:100%;
+width:0;
+background:linear-gradient(90deg,var(--cyan),var(--purple));
+}
 
 details{
-    max-width:900px;
-    margin:10px auto;
-    padding:18px;
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:12px;
+background:var(--card);
+border:1px solid var(--line);
+border-radius:12px;
+padding:15px;
+margin:9px 0;
 }
 
 summary{
-    cursor:pointer;
-    font-weight:bold;
+cursor:pointer;
+font-weight:bold;
 }
 
 details p{
-    margin-top:10px;
-    color:var(--muted);
+color:var(--muted);
+line-height:1.6;
 }
 
-/* MODAL */
+footer{
+border-top:1px solid var(--line);
+padding:35px 20px;
+text-align:center;
+color:var(--muted);
+}
 
 .modal{
-    position:fixed;
-    inset:0;
-    display:none;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-    background:rgba(0,0,0,.78);
-    backdrop-filter:blur(8px);
-    z-index:3000;
+display:none;
+position:fixed;
+inset:0;
+z-index:50;
+background:#000c;
+align-items:center;
+justify-content:center;
+padding:20px;
 }
 
-.modal.open{
-    display:flex;
+.modal.active{
+display:flex;
 }
 
-.modal-box{
-    position:relative;
-    width:min(900px,100%);
-    max-height:88vh;
-    overflow:auto;
-    padding:32px;
-    border:1px solid var(--border);
-    border-radius:20px;
-    background:#0a1220;
+.modalbox{
+max-width:700px;
+max-height:85vh;
+overflow:auto;
+background:#0d1322;
+border:1px solid #35415e;
+border-radius:18px;
+padding:25px;
 }
 
 .close{
-    position:absolute;
-    right:20px;
-    top:14px;
-    font-size:30px;
-    cursor:pointer;
-    color:var(--muted);
+float:right;
+background:none;
+border:0;
+color:white;
+font-size:25px;
 }
-
-.modal-box h2{
-    color:var(--cyan);
-    margin-bottom:15px;
-}
-
-.modal-box h3{
-    margin-top:22px;
-    margin-bottom:6px;
-}
-
-.modal-box p,
-.modal-box li{
-    color:#aebbd0;
-}
-
-.modal-box ul{
-    padding-left:22px;
-}
-
-.tip{
-    padding:15px;
-    margin-top:20px;
-    border-left:3px solid var(--cyan);
-    background:#0e1b2c;
-}
-
-/* SEARCH */
-
-.search{
-    max-width:800px;
-    margin:0 auto 30px;
-}
-
-.hidden{
-    display:none!important;
-}
-
-/* FOOTER */
-
-footer{
-    text-align:center;
-    padding:55px 7%;
-    border-top:1px solid var(--border);
-    color:#708096;
-}
-
-.footer-logo{
-    font-size:25px;
-    font-weight:900;
-    color:white;
-    letter-spacing:2px;
-}
-
-/* MOBILE */
 
 @media(max-width:800px){
-
-    header{
-        padding:0 5%;
-    }
-
-    nav{
-        display:none;
-        position:absolute;
-        left:0;
-        right:0;
-        top:72px;
-        padding:20px;
-        background:#070c16;
-        flex-direction:column;
-        border-bottom:1px solid var(--border);
-    }
-
-    nav.open{
-        display:flex;
-    }
-
-    .menu{
-        display:block;
-    }
-
-    section{
-        padding:75px 5%;
-    }
-
-    .stats{
-        grid-template-columns:1fr 1fr;
-        margin:0 5%;
-    }
-
-    .tool-row{
-        grid-template-columns:1fr;
-    }
-
-    .ai-input{
-        flex-direction:column;
-    }
-
-    .message{
-        max-width:92%;
-    }
-
-    .road{
-        flex-direction:column;
-    }
+nav{display:none}
+.grid{grid-template-columns:1fr 1fr}
 }
 
+@media(max-width:520px){
+.grid{grid-template-columns:1fr}
+.hero{padding-top:60px}
+.hero h1{font-size:48px}
+.chatbar{flex-direction:column}
+.chatbar button{padding:13px}
+}
 </style>
 </head>
 
 <body>
 
 <header>
+<div class="nav">
+<div class="logo">VINLUMEXZ</div>
 
-<div class="logo">
-VIN<span>LUMEXZ</span>
-</div>
-
-<div class="menu" onclick="toggleMenu()">☰</div>
-
-<nav id="nav">
-<a href="#inicio">Início</a>
-<a href="#academy">Academy</a>
-<a href="#tools">Ferramentas</a>
-<a href="#ai">VINLUMEXZ AI</a>
-<a href="#roadmap">Roadmap</a>
+<nav>
+<a href="#academia">Academia</a>
+<a href="#ferramentas">Ferramentas</a>
+<a href="#ia">IA</a>
+<a href="#roadmap">Noob → Pro</a>
 <a href="#faq">FAQ</a>
 </nav>
 
+</div>
 </header>
 
+<main>
 
-<!-- HERO -->
+<section class="hero">
 
-<section class="hero" id="inicio">
-
-<div class="hero-content">
-
-<div class="badge">⚡ VINLUMEXZ CREATOR ACADEMY</div>
+<span class="badge">VINLUMEXZ • CREATOR ACADEMY</span>
 
 <h1>
-Crie melhor.<br>
-<span class="gradient">Evolua mais.</span>
+Transforme ideias em
+<span>conteúdo.</span>
 </h1>
 
 <p>
-Uma central completa para aprender criação de conteúdo,
-TikTok, roteiro, edição, estratégia, análise e inteligência artificial.
-Do primeiro vídeo até processos muito mais avançados.
+Aprenda criação de conteúdo, TikTok, YouTube, edição,
+IA, Roblox, programação, tecnologia, vendas e muito mais.
+Tudo em um só lugar.
 </p>
 
-<div class="actions">
-
-<a class="btn primary" href="#academy">
-Começar aprendizado
-</a>
-
-<a class="btn secondary" href="#ai">
-🤖 Falar com a IA
-</a>
-
-</div>
-
+<div class="buttons">
+<a class="btn" href="#academia">Começar agora</a>
+<a class="btn alt" href="#ia">Falar com a IA</a>
 </div>
 
 </section>
 
 
-<div class="stats">
+<section id="academia">
 
-<div class="stat">
-<strong>01</strong>
-<span>Aprender</span>
-</div>
+<h2>🎓 Academia Creator</h2>
 
-<div class="stat">
-<strong>02</strong>
-<span>Praticar</span>
-</div>
-
-<div class="stat">
-<strong>03</strong>
-<span>Analisar</span>
-</div>
-
-<div class="stat">
-<strong>04</strong>
-<span>Melhorar</span>
-</div>
-
-</div>
-
-
-<!-- ACADEMY -->
-
-<section id="academy">
-
-<div class="section-title">
-
-<h2>📚 Creator Academy</h2>
-
-<p>
-Aprenda cada parte do processo. Clique em qualquer módulo para abrir uma explicação completa.
+<p class="subtitle">
+Aprenda os principais conceitos. Clique em "Saiba mais".
 </p>
 
-</div>
+<div class="grid" id="academyCards"></div>
+
+</section>
+
+
+<section id="ferramentas">
+
+<h2>🛠️ Ferramentas</h2>
+
+<p class="subtitle">
+Ferramentas rápidas para criar conteúdo.
+</p>
 
 <div class="grid">
 
+<div class="tool">
+<h3>💡 Gerador de ideias</h3>
 
-<div class="card">
-<div class="icon">🎯</div>
-<h3>Nicho & Posicionamento</h3>
-<p>Descubra como escolher um tema, definir público e construir uma identidade.</p>
-<button onclick="openLesson('nicho')">Estudar módulo</button>
+<input id="ideaInput" placeholder="Digite um tema">
+
+<button class="btn" onclick="generateIdeas()">Gerar ideias</button>
+
+<div class="output" id="ideaOutput">
+Digite um tema acima.
+</div>
 </div>
 
 
-<div class="card">
-<div class="icon">💡</div>
-<h3>Ideias de conteúdo</h3>
-<p>Como encontrar assuntos sem depender de inspiração aleatória.</p>
-<button onclick="openLesson('ideias')">Estudar módulo</button>
+<div class="tool">
+
+<h3>🧲 Gerador de hooks</h3>
+
+<input id="hookInput" placeholder="Tema do vídeo">
+
+<button class="btn" onclick="generateHooks()">Gerar hooks</button>
+
+<div class="output" id="hookOutput">
+Digite um tema acima.
 </div>
-
-
-<div class="card">
-<div class="icon">🧲</div>
-<h3>Hooks</h3>
-<p>Modelos de abertura para apresentar rapidamente uma razão para continuar.</p>
-<button onclick="openLesson('hooks')">Estudar módulo</button>
-</div>
-
-
-<div class="card">
-<div class="icon">⏱️</div>
-<h3>Retenção</h3>
-<p>Estrutura, progressão, ritmo e entrega de valor.</p>
-<button onclick="openLesson('retencao')">Estudar módulo</button>
-</div>
-
-
-<div class="card">
-<div class="icon">📝</div>
-<h3>Roteiros</h3>
-<p>Estruturas para tutorial, lista, história, opinião, comparação e mais.</p>
-<button onclick="openLesson('roteiro')">Estudar módulo</button>
-</div>
-
-
-<div class="card">
-<div class="icon">🎬</div>
-<h3>Storytelling</h3>
-<p>Como organizar acontecimentos para criar contexto, tensão e conclusão.</p>
-<button onclick="openLesson('storytelling')">Estudar módulo</button>
-</div>
-
-
-<div class="card">
-<div class="icon">✂️</div>
-<h3>Edição</h3>
-<p>Cortes, texto, áudio, imagens, legendas e ritmo.</p>
-<button onclick="openLesson('edicao')">Estudar módulo</button>
-</div>
-
-
-<div class="card">
-<div class="icon">🖼️</div>
-<h3>Capas & títulos</h3>
-<p>Como tornar a proposta do conteúdo clara antes mesmo da pessoa assistir.</p>
-<button onclick="openLesson('capas')">Estudar módulo</button>
-</div>
-
-
-<div class="card">
-<div class="icon">#️⃣</div>
-<h3>Hashtags & palavras-chave</h3>
-<p>Relevância, contexto e organização sem depender de spam.</p>
-<button onclick="openLesson('hashtags')">Estudar módulo</button>
-</div>
-
-
-<div class="card">
-<div class="icon">💬</div>
-<h3>Engajamento</h3>
-<p>Como criar conteúdo que naturalmente incentive conversa e compartilhamento.</p>
-<button onclick="openLesson('engajamento')">Estudar módulo</button>
-</div>
-
-
-<div class="card">
-<div class="icon">📊</div>
-<h3>Analytics</h3>
-<p>Como olhar para dados e transformar números em decisões.</p>
-<button onclick="openLesson('analytics')">Estudar módulo</button>
-</div>
-
-
-<div class="card">
-<div class="icon">🧪</div>
-<h3>Experimentação</h3>
-<p>Como testar hooks, formatos, temas e estilos de maneira organizada.</p>
-<button onclick="openLesson('testes')">Estudar módulo</button>
-</div>
-
-
-<div class="card">
-<div class="icon">🤝</div>
-<h3>Comunidade</h3>
-<p>Como transformar espectadores em uma audiência que acompanha seu trabalho.</p>
-<button onclick="openLesson('comunidade')">Estudar módulo</button>
-</div>
-
-
-<div class="card">
-<div class="icon">💰</div>
-<h3>Projetos & vendas</h3>
-<p>Fundamentos de oferta, confiança, divulgação e transparência.</p>
-<button onclick="openLesson('vendas')">Estudar módulo</button>
-</div>
-
-
-<div class="card">
-<div class="icon">⚠️</div>
-<h3>Erros comuns</h3>
-<p>Descubra problemas que podem prejudicar a evolução de um criador.</p>
-<button onclick="openLesson('erros')">Estudar módulo</button>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- TOOLS -->
-
-<section class="dark" id="tools">
-
-<div class="section-title">
-
-<h2>🛠️ Creator Tools</h2>
-
-<p>
-Ferramentas rápidas para transformar conhecimento em prática.
-</p>
 
 </div>
 
 
 <div class="tool">
 
-<div class="tool-row">
+<h3>#️⃣ Hashtags</h3>
 
-<div class="field">
+<input id="hashInput" placeholder="Tema">
 
-<label>Tema do conteúdo</label>
+<button class="btn" onclick="generateHashtags()">Gerar</button>
 
-<input id="toolTopic" placeholder="Ex: Roblox, edição, IA...">
-
+<div class="output" id="hashOutput">
+Digite um tema acima.
 </div>
-
-
-<div class="field">
-
-<label>Tipo de conteúdo</label>
-
-<select id="toolType">
-
-<option>Tutorial</option>
-<option>Lista</option>
-<option>Storytelling</option>
-<option>Comparação</option>
-<option>Opinião</option>
-<option>Demonstração</option>
-
-</select>
 
 </div>
 
 </div>
 
 
-<div class="actions">
+<div class="tool">
 
-<button class="btn primary" onclick="generateIdeas()">
-💡 Gerar ideias
-</button>
+<h3>📝 Gerador de roteiro</h3>
 
-<button class="btn secondary" onclick="generateHooks()">
-🧲 Gerar hooks
-</button>
+<textarea id="scriptInput" placeholder="Qual será o tema do vídeo?"></textarea>
 
-<button class="btn secondary" onclick="generateScript()">
-📝 Gerar roteiro
-</button>
+<button class="btn" onclick="generateScript()">Criar roteiro</button>
 
-<button class="btn secondary" onclick="generateHashtags()">
-#️⃣ Gerar hashtags
-</button>
-
-</div>
-
-
-<div id="toolResult" class="result">
-Escolha uma ferramenta para começar.
+<div class="output" id="scriptOutput">
+Seu roteiro aparecerá aqui.
 </div>
 
 </div>
@@ -1003,476 +486,190 @@ Escolha uma ferramenta para começar.
 </section>
 
 
-<!-- AI -->
-
-<section id="ai">
-
-<div class="section-title">
+<section id="ia">
 
 <h2>🤖 VINLUMEXZ AI</h2>
 
-<p>
-Seu assistente de criação integrado ao site.
+<p class="subtitle">
+Uma IA local com banco de palavras, reconhecimento de assuntos
+e memória no navegador.
 </p>
 
-</div>
+<div class="chat">
 
+<div class="messages" id="messages">
 
-<div class="ai-shell">
+<div class="msg ai">
+Olá! 👋 Eu sou a VINLUMEXZ AI.
 
-<div class="ai-head">
-
-<div class="ai-dot"></div>
-
-<div>
-<strong>VINLUMEXZ AI</strong><br>
-<small>Creator Assistant • Online</small>
-</div>
-
-</div>
-
-
-<div class="chat" id="chat">
-
-<div class="message bot">
-
-Olá! Eu sou a VINLUMEXZ AI. 🤖
-
-Posso ajudar você com:
-
-• ideias de conteúdo
-• hooks
-• roteiros
-• retenção
-• edição
-• hashtags
-• análise
-• estratégia
-
-Pergunte alguma coisa ou use um dos atalhos abaixo.
-
+Pode perguntar sobre Roblox, PC, programação,
+TikTok, YouTube, IA, escola, matemática,
+sites, edição, vendas e vários outros assuntos.
 </div>
 
 </div>
 
-
-<div class="quick">
-
-<button onclick="quickAI('Me dê 10 ideias de vídeos')">
-💡 Ideias
-</button>
-
-<button onclick="quickAI('Me dê 10 hooks')">
-🧲 Hooks
-</button>
-
-<button onclick="quickAI('Crie um roteiro')">
-📝 Roteiro
-</button>
-
-<button onclick="quickAI('Como melhorar a retenção?')">
-⏱️ Retenção
-</button>
-
-<button onclick="quickAI('Como usar hashtags?')">
-#️⃣ Hashtags
-</button>
-
-</div>
-
-
-<div class="ai-input">
+<div class="chatbar">
 
 <input
-id="aiInput"
-placeholder="Pergunte para a VINLUMEXZ AI..."
+id="chatInput"
+placeholder="Digite sua pergunta..."
 onkeydown="if(event.key==='Enter')sendAI()"
 >
 
-<button class="btn primary" onclick="sendAI()">
-Enviar
+<button onclick="sendAI()">Enviar</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="roadmap">
+
+<h2>🚀 Noob → Pro</h2>
+
+<p class="subtitle">
+Siga as etapas para desenvolver suas habilidades.
+</p>
+
+<div class="tool">
+
+<p>1️⃣ Escolher um nicho ou assunto.</p>
+<p>2️⃣ Aprender a criar ideias.</p>
+<p>3️⃣ Aprender roteiros.</p>
+<p>4️⃣ Aprender edição.</p>
+<p>5️⃣ Publicar e analisar.</p>
+<p>6️⃣ Melhorar com os resultados.</p>
+
+<div class="progress">
+<span id="progressBar"></span>
+</div>
+
+<button class="btn" onclick="nextStep()">
+Concluir próxima etapa
 </button>
 
-</div>
+<p id="stepText">0/6 concluídas</p>
 
 </div>
 
 </section>
 
-
-<!-- ROADMAP -->
-
-<section class="dark" id="roadmap">
-
-<div class="section-title">
-
-<h2>🏆 Roadmap Noob → Pro</h2>
-
-<p>
-Não tente aprender tudo em um dia. Evolua por etapas.
-</p>
-
-</div>
-
-
-<div class="roadmap">
-
-
-<div class="road">
-
-<div class="road-number">1</div>
-
-<div>
-
-<h3>NOOB — Fundação</h3>
-
-<p>
-Aprenda gravação, edição básica, publicação, nicho e estrutura simples de vídeo.
-Publique seus primeiros conteúdos e observe o que acontece.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="road">
-
-<div class="road-number">2</div>
-
-<div>
-
-<h3>INICIANTE — Consistência</h3>
-
-<p>
-Comece a trabalhar hooks, roteiros, ritmo, títulos, capas e análise básica.
-O objetivo é aprender fazendo.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="road">
-
-<div class="road-number">3</div>
-
-<div>
-
-<h3>INTERMEDIÁRIO — Estratégia</h3>
-
-<p>
-Crie formatos repetíveis, organize ideias, compare resultados e descubra quais
-temas e estruturas funcionam melhor para sua audiência.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="road">
-
-<div class="road-number">4</div>
-
-<div>
-
-<h3>AVANÇADO — Sistema</h3>
-
-<p>
-Crie processos de pesquisa, roteiro, gravação, edição, publicação e análise.
-Use ferramentas para reduzir trabalho repetitivo.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="road">
-
-<div class="road-number">5</div>
-
-<div>
-
-<h3>PRO — Identidade</h3>
-
-<p>
-Construa uma identidade própria, comunidade, projetos e um sistema sustentável
-de produção. O objetivo não é copiar outros criadores, mas desenvolver sua própria vantagem.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CHECKLIST -->
 
 <section>
 
-<div class="section-title">
+<h2>📚 Glossário</h2>
 
-<h2>✅ Checklist antes de publicar</h2>
+<p class="subtitle">
+Termos importantes para creators.
+</p>
 
+<div class="grid">
+
+<div class="card">
+<h3>🎯 Hook</h3>
 <p>
-Marque o que você já verificou.
+A abertura do conteúdo que apresenta rapidamente
+o assunto ou motivo para continuar assistindo.
 </p>
-
 </div>
 
-
-<div class="checklist" id="checklist">
-
-<label class="check">
-<input type="checkbox" onchange="updateProgress()">
-<span>O vídeo tem um assunto claro?</span>
-</label>
-
-<label class="check">
-<input type="checkbox" onchange="updateProgress()">
-<span>Os primeiros segundos apresentam rapidamente o tema?</span>
-</label>
-
-<label class="check">
-<input type="checkbox" onchange="updateProgress()">
-<span>O conteúdo entrega aquilo que foi prometido?</span>
-</label>
-
-<label class="check">
-<input type="checkbox" onchange="updateProgress()">
-<span>Existem pausas ou trechos que podem ser removidos?</span>
-</label>
-
-<label class="check">
-<input type="checkbox" onchange="updateProgress()">
-<span>O áudio está claro?</span>
-</label>
-
-<label class="check">
-<input type="checkbox" onchange="updateProgress()">
-<span>Texto e legendas estão legíveis?</span>
-</label>
-
-<label class="check">
-<input type="checkbox" onchange="updateProgress()">
-<span>A capa/título representa corretamente o conteúdo?</span>
-</label>
-
-<label class="check">
-<input type="checkbox" onchange="updateProgress()">
-<span>As hashtags e palavras-chave são relevantes?</span>
-</label>
-
-<label class="check">
-<input type="checkbox" onchange="updateProgress()">
-<span>O CTA é natural e faz sentido?</span>
-</label>
-
-<label class="check">
-<input type="checkbox" onchange="updateProgress()">
-<span>Revisei o vídeo inteiro antes de publicar?</span>
-</label>
-
-
-<div class="progress-box">
-
-<div class="progress-bar">
-
-<div class="progress-fill" id="progressFill"></div>
-
+<div class="card">
+<h3>⏱️ Retenção</h3>
+<p>
+Indica quanto do conteúdo o público continua assistindo.
+</p>
 </div>
 
-<p id="progressText" style="color:#94a3b8;text-align:center">
-0% concluído
+<div class="card">
+<h3>📢 CTA</h3>
+<p>
+Call to action: uma orientação para a próxima ação.
 </p>
+</div>
 
+<div class="card">
+<h3>🎯 Nicho</h3>
+<p>
+Tema ou área em que você concentra seu conteúdo.
+</p>
+</div>
+
+<div class="card">
+<h3>📊 CTR</h3>
+<p>
+Taxa de cliques em relação às impressões.
+</p>
+</div>
+
+<div class="card">
+<h3>🧪 A/B Teste</h3>
+<p>
+Comparação de versões para descobrir qual funciona melhor.
+</p>
 </div>
 
 </div>
 
 </section>
 
-
-<!-- SEARCH -->
-
-<section class="dark">
-
-<div class="section-title">
-
-<h2>🔎 Biblioteca rápida</h2>
-
-<p>
-Pesquise um conceito.
-</p>
-
-</div>
-
-<div class="search">
-
-<input
-id="search"
-placeholder="Pesquisar: hook, CTA, retenção, nicho..."
-oninput="searchLibrary()"
->
-
-</div>
-
-
-<div class="grid" id="library">
-
-<div class="card searchable">
-<h3>Hook</h3>
-<p>Abertura que apresenta rapidamente o motivo para prestar atenção ao conteúdo.</p>
-</div>
-
-<div class="card searchable">
-<h3>CTA</h3>
-<p>Call to Action: convite para uma ação relevante ao conteúdo.</p>
-</div>
-
-<div class="card searchable">
-<h3>Retenção</h3>
-<p>Forma de observar como o público continua consumindo o conteúdo.</p>
-</div>
-
-<div class="card searchable">
-<h3>Nicho</h3>
-<p>Área temática na qual o criador concentra sua produção.</p>
-</div>
-
-<div class="card searchable">
-<h3>Payoff</h3>
-<p>Momento em que a promessa ou pergunta apresentada recebe sua conclusão.</p>
-</div>
-
-<div class="card searchable">
-<h3>Storytelling</h3>
-<p>Organização de acontecimentos para transmitir uma história ou ideia.</p>
-</div>
-
-<div class="card searchable">
-<h3>B-roll</h3>
-<p>Imagens complementares usadas para ilustrar o que está sendo falado.</p>
-</div>
-
-<div class="card searchable">
-<h3>Engajamento</h3>
-<p>Interações que ajudam a entender a reação da audiência.</p>
-</div>
-
-<div class="card searchable">
-<h3>A/B test</h3>
-<p>Comparação controlada de versões para descobrir qual abordagem funciona melhor.</p>
-</div>
-
-<div class="card searchable">
-<h3>SEO</h3>
-<p>Otimização para ajudar mecanismos de busca e sistemas de descoberta a entenderem o assunto.</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FAQ -->
 
 <section id="faq">
 
-<div class="section-title">
-
 <h2>❓ FAQ</h2>
 
-<p>Perguntas importantes para quem está começando.</p>
-
-</div>
-
-
 <details>
-<summary>Existe uma fórmula para viralizar?</summary>
+<summary>Hashtags garantem viralização?</summary>
 <p>
-Não existe uma fórmula que garanta viralização. Sistemas de recomendação
-consideram vários sinais e podem mudar. O melhor caminho é produzir conteúdo
-relevante, testar e analisar os resultados.
+Não. Hashtags ajudam a contextualizar o conteúdo,
+mas não garantem visualizações.
 </p>
 </details>
-
 
 <details>
 <summary>Preciso postar todos os dias?</summary>
 <p>
-Não necessariamente. Uma frequência sustentável é mais útil do que tentar
-produzir em um ritmo que prejudique a qualidade ou faça você desistir.
+Não necessariamente. Uma frequência sustentável
+é mais importante do que publicar sem planejamento.
 </p>
 </details>
-
 
 <details>
-<summary>Preciso usar muitas hashtags?</summary>
+<summary>A IA consegue responder qualquer coisa?</summary>
 <p>
-Não. Priorize termos relacionados ao assunto real do conteúdo.
+Esta versão utiliza um sistema local de palavras e regras.
+Ela consegue reconhecer muitos assuntos, mas não é uma
+IA generativa conectada à internet.
 </p>
 </details>
-
-
-<details>
-<summary>Um vídeo precisa ser extremamente rápido?</summary>
-<p>
-Não. O ritmo deve combinar com o assunto. Clareza e progressão são mais
-importantes do que simplesmente cortar tudo rapidamente.
-</p>
-</details>
-
 
 <details>
 <summary>Posso usar IA para criar conteúdo?</summary>
 <p>
-Sim. IA pode ajudar com pesquisa, organização, ideias, roteiros e análise.
-Revise o resultado, personalize e verifique informações importantes.
-</p>
-</details>
-
-
-<details>
-<summary>A VINLUMEXZ AI é uma IA generativa igual ao ChatGPT?</summary>
-<p>
-Nesta versão, ela é uma assistente local baseada em uma biblioteca de
-conhecimento e regras JavaScript. Para usar um modelo generativo real,
-seria necessário conectar uma API através de um servidor seguro.
+Sim. IA pode ajudar com ideias, organização, roteiros,
+pesquisa e análise. Sempre revise o resultado.
 </p>
 </details>
 
 </section>
 
+</main>
+
 
 <footer>
-
-<div class="footer-logo">VINLUMEXZ</div>
-
-<p>Creator Academy • Estratégia • IA • Conteúdo</p>
-
-<p style="margin-top:10px">
-© 2026 VINLUMEXZ
-</p>
-
+© 2026 VINLUMEXZ • Creator Academy
 </footer>
 
 
-<!-- MODAL -->
-
 <div class="modal" id="modal">
 
-<div class="modal-box">
+<div class="modalbox">
 
-<div class="close" onclick="closeModal()">×</div>
+<button class="close" onclick="closeModal()">×</button>
 
-<div id="lessonContent"></div>
+<div id="modalContent"></div>
 
 </div>
 
@@ -1481,898 +678,772 @@ seria necessário conectar uma API através de um servidor seguro.
 
 <script>
 
-/* MENU */
+/* =====================================================
+   ACADEMIA
+===================================================== */
 
-function toggleMenu(){
+const lessons={
 
-    document.getElementById("nav").classList.toggle("open");
+"Nicho":{
+icon:"🎯",
+text:"Um nicho é uma área específica de conteúdo. Escolha um assunto que você consiga explorar por bastante tempo e pense em quem gostaria de consumir esse conteúdo."
+},
 
+"Público":{
+icon:"👥",
+text:"Entenda quem você quer alcançar. Descubra quais dúvidas, problemas, interesses e objetivos esse público possui."
+},
+
+"Ideias":{
+icon:"💡",
+text:"Você pode encontrar ideias através de perguntas frequentes, tutoriais, comparações, erros comuns, listas, experiências e novidades do seu assunto."
+},
+
+"Hooks":{
+icon:"🧲",
+text:"Um hook é a abertura do conteúdo. Ele deve apresentar rapidamente uma ideia interessante, problema, pergunta ou benefício real. Evite prometer algo que o vídeo não entrega."
+},
+
+"Retenção":{
+icon:"⏱️",
+text:"Retenção mostra quanto do conteúdo as pessoas continuam assistindo. Clareza, ritmo, progressão e entrega da promessa ajudam a construir uma experiência melhor."
+},
+
+"Roteiros":{
+icon:"📝",
+text:"Uma estrutura simples é: abertura → contexto → desenvolvimento → exemplo → conclusão → CTA opcional."
+},
+
+"Edição":{
+icon:"✂️",
+text:"Use cortes para remover partes desnecessárias. Texto, legendas, imagens, zooms e efeitos devem ajudar a comunicação e não apenas encher o vídeo."
+},
+
+"Capas":{
+icon:"🖼️",
+text:"Uma boa capa comunica rapidamente o assunto. Use composição simples, texto curto quando necessário e elementos fáceis de entender."
+},
+
+"Hashtags":{
+icon:"#️⃣",
+text:"Use hashtags relacionadas ao conteúdo. Evite depender de hashtags genéricas ou acreditar que existe uma hashtag que garanta viralização."
+},
+
+"Engajamento":{
+icon:"💬",
+text:"Faça perguntas naturais relacionadas ao conteúdo, responda comentários e crie motivos reais para as pessoas participarem da conversa."
+},
+
+"Analytics":{
+icon:"📊",
+text:"Analise visualizações, tempo assistido, retenção, cliques e interações quando disponíveis. Compare conteúdos semelhantes para encontrar padrões."
+},
+
+"Testes":{
+icon:"🧪",
+text:"Teste diferentes formatos. Quando possível, altere uma variável por vez para entender melhor o impacto de cada mudança."
+},
+
+"IA":{
+icon:"🤖",
+text:"IA pode ajudar em brainstorming, organização, roteiros, análise e automação. Sempre revise as respostas antes de publicar."
+},
+
+"Vendas":{
+icon:"💰",
+text:"Uma venda legítima precisa explicar claramente o produto, para quem serve, preço, condições e benefícios reais. Evite promessas de dinheiro fácil ou lucro garantido."
+},
+
+"Erros":{
+icon:"⚠️",
+text:"Erros comuns incluem copiar conteúdo sem entender, exagerar nos efeitos, usar hashtags irrelevantes, prometer demais e nunca analisar os resultados."
 }
-
-
-/* LESSONS */
-
-const lessons = {
-
-nicho:`
-
-<h2>🎯 Nicho & Posicionamento</h2>
-
-<p>
-Seu nicho é o território principal do seu conteúdo. Um bom posicionamento
-ajuda o público a entender rapidamente por que deveria acompanhar seu perfil.
-</p>
-
-<h3>1. Escolha um tema sustentável</h3>
-
-<p>
-Não escolha apenas algo porque está em alta. Pense em assuntos sobre os quais
-você consegue aprender e produzir repetidamente.
-</p>
-
-<h3>2. Encontre um recorte</h3>
-
-<p>
-"Games" é amplo. "Tutoriais de Roblox para iniciantes" é muito mais específico.
-Quanto mais clara a proposta, mais fácil organizar conteúdo.
-</p>
-
-<h3>3. Conheça o público</h3>
-
-<p>
-Pergunte: o que essa pessoa quer aprender? O que ela acha difícil?
-Que dúvidas aparecem repetidamente?
-</p>
-
-<div class="tip">
-💡 Nicho não precisa ser uma prisão. Você pode evoluir e ajustar seu posicionamento com o tempo.
-</div>
-`,
-
-ideias:`
-
-<h2>💡 Ideias de conteúdo</h2>
-
-<h3>Use 5 fontes principais</h3>
-
-<ul>
-
-<li>Perguntas que as pessoas fazem.</li>
-
-<li>Erros comuns.</li>
-
-<li>Tutoriais.</li>
-
-<li>Comparações.</li>
-
-<li>Experiências e aprendizados.</li>
-
-</ul>
-
-<h3>Crie variações</h3>
-
-<p>
-Uma ideia pode virar tutorial, lista, comparação, história, opinião,
-demonstração e resposta a uma pergunta.
-</p>
-
-<h3>Banco de ideias</h3>
-
-<p>
-Nunca dependa de lembrar uma ideia na hora de gravar. Mantenha uma lista
-com temas, hooks e perguntas.
-</p>
-`,
-
-hooks:`
-
-<h2>🧲 Hooks</h2>
-
-<p>
-O hook é a primeira oportunidade de deixar claro o assunto e criar interesse.
-Ele não precisa mentir ou exagerar.
-</p>
-
-<h3>❓ Pergunta</h3>
-<p>Apresente uma dúvida real do público.</p>
-
-<h3>⚠️ Erro</h3>
-<p>Comece mostrando um erro comum e explique como melhorar.</p>
-
-<h3>🔎 Curiosidade</h3>
-<p>Apresente uma informação que será explicada.</p>
-
-<h3>🎬 Demonstração</h3>
-<p>Mostre o processo ou resultado logo no começo.</p>
-
-<h3>🆚 Comparação</h3>
-<p>Mostre duas abordagens diferentes.</p>
-
-<h3>📋 Lista</h3>
-<p>Apresente uma quantidade concreta de pontos.</p>
-
-<div class="tip">
-⚠️ Hook bom cria expectativa. Conteúdo bom cumpre essa expectativa.
-</div>
-`,
-
-retencao:`
-
-<h2>⏱️ Retenção</h2>
-
-<h3>Estrutura</h3>
-
-<p>
-Hook → contexto → desenvolvimento → exemplos → payoff → CTA.
-</p>
-
-<h3>Progressão</h3>
-
-<p>
-Faça cada trecho acrescentar uma nova informação. Se o vídeo fica repetindo
-a mesma coisa, a atenção pode cair.
-</p>
-
-<h3>Mudança visual</h3>
-
-<p>
-Use cortes, texto, imagens ou demonstrações quando eles realmente ajudam
-a explicar ou manter o ritmo.
-</p>
-
-<h3>Payoff</h3>
-
-<p>
-Entregue a resposta, demonstração ou conclusão apresentada no começo.
-</p>
-`,
-
-roteiro:`
-
-<h2>📝 Roteiros</h2>
-
-<h3>Tutorial</h3>
-<p>Problema → passos → demonstração → resultado.</p>
-
-<h3>Lista</h3>
-<p>Hook → pontos → melhor ponto → conclusão.</p>
-
-<h3>Storytelling</h3>
-<p>Contexto → problema → desenvolvimento → descoberta → resultado.</p>
-
-<h3>Comparação</h3>
-<p>A → B → diferenças → vantagens → conclusão.</p>
-
-<h3>Opinião</h3>
-<p>Tema → posição → argumentos → exemplos → conclusão.</p>
-
-<h3>Demonstração</h3>
-<p>Resultado → processo → explicação → resultado final.</p>
-`,
-
-storytelling:`
-
-<h2>🎬 Storytelling</h2>
-
-<p>
-Storytelling não significa inventar uma história. É organizar informações
-de maneira que exista progressão.
-</p>
-
-<h3>Contexto</h3>
-<p>Mostre onde a história começa.</p>
-
-<h3>Problema</h3>
-<p>Apresente o obstáculo.</p>
-
-<h3>Desenvolvimento</h3>
-<p>Mostre tentativas, descobertas ou mudanças.</p>
-
-<h3>Conclusão</h3>
-<p>Mostre o resultado e o que pode ser aprendido.</p>
-`,
-
-edicao:`
-
-<h2>✂️ Edição</h2>
-
-<h3>Cortes</h3>
-<p>Remova pausas, erros e partes que não acrescentam.</p>
-
-<h3>Texto</h3>
-<p>Destaque palavras importantes, sem transformar a tela em uma parede de texto.</p>
-
-<h3>Áudio</h3>
-<p>Priorize voz clara e níveis equilibrados.</p>
-
-<h3>Legendas</h3>
-<p>Revise a transcrição automática antes de publicar.</p>
-
-<h3>B-roll</h3>
-<p>Use imagens complementares para explicar ou ilustrar.</p>
-
-<h3>Ritmo</h3>
-<p>O objetivo não é cortar tudo. É manter o conteúdo avançando.</p>
-`,
-
-capas:`
-
-<h2>🖼️ Capas & títulos</h2>
-
-<p>
-A capa e o título devem ajudar o público a entender o assunto.
-</p>
-
-<h3>Clareza</h3>
-<p>Uma pessoa deve conseguir entender a ideia principal rapidamente.</p>
-
-<h3>Contraste</h3>
-<p>Elementos importantes precisam ser visualmente distinguíveis.</p>
-
-<h3>Curiosidade honesta</h3>
-<p>Apresente uma pergunta ou benefício real sem prometer algo que o vídeo não entrega.</p>
-`,
-
-hashtags:`
-
-<h2>#️⃣ Hashtags & palavras-chave</h2>
-
-<h3>Relevância</h3>
-<p>Use termos diretamente relacionados ao conteúdo.</p>
-
-<h3>Especificidade</h3>
-<p>Termos específicos podem contextualizar melhor o assunto.</p>
-
-<h3>Descrição</h3>
-<p>Escreva naturalmente sobre o tema. Não transforme a descrição em uma sequência de palavras aleatórias.</p>
-
-<div class="tip">
-💡 Hashtags são contexto, não uma garantia de alcance.
-</div>
-`,
-
-engajamento:`
-
-<h2>💬 Engajamento</h2>
-
-<h3>Faça perguntas úteis</h3>
-<p>Convide as pessoas a compartilhar uma experiência ou opinião relacionada ao tema.</p>
-
-<h3>Responda comentários</h3>
-<p>Comentários podem revelar novas dúvidas que viram futuros conteúdos.</p>
-
-<h3>Crie conversa</h3>
-<p>Evite pedir comentários sem motivo. Dê ao público algo sobre o qual realmente vale a pena conversar.</p>
-`,
-
-analytics:`
-
-<h2>📊 Analytics</h2>
-
-<h3>Não olhe apenas visualizações</h3>
-
-<p>
-Analise o conjunto de informações disponível na plataforma.
-</p>
-
-<h3>Perguntas importantes</h3>
-
-<ul>
-
-<li>Onde as pessoas deixam de assistir?</li>
-
-<li>Quais temas funcionaram melhor?</li>
-
-<li>Quais vídeos geraram mais interação?</li>
-
-<li>Qual formato foi mais consistente?</li>
-
-<li>O que posso testar no próximo vídeo?</li>
-
-</ul>
-
-<div class="tip">
-📌 Dados servem para gerar hipóteses. Não transforme uma única publicação em uma regra definitiva.
-</div>
-`,
-
-testes:`
-
-<h2>🧪 Experimentação</h2>
-
-<p>
-Teste uma variável por vez quando possível.
-</p>
-
-<h3>Hook</h3>
-<p>Compare duas aberturas para um tema semelhante.</p>
-
-<h3>Formato</h3>
-<p>Compare tutorial e lista.</p>
-
-<h3>Ritmo</h3>
-<p>Teste uma edição mais simples e outra mais dinâmica.</p>
-
-<h3>Tema</h3>
-<p>Compare diferentes assuntos dentro do mesmo nicho.</p>
-`,
-
-comunidade:`
-
-<h2>🤝 Comunidade</h2>
-
-<h3>Seja reconhecível</h3>
-<p>Desenvolva linguagem e identidade próprias.</p>
-
-<h3>Escute</h3>
-<p>Comentários e dúvidas são fontes importantes de ideias.</p>
-
-<h3>Crie continuidade</h3>
-<p>Séries e temas recorrentes podem facilitar o acompanhamento do conteúdo.</p>
-`,
-
-vendas:`
-
-<h2>💰 Projetos & vendas</h2>
-
-<h3>Oferta clara</h3>
-<p>Explique exatamente o que está sendo oferecido.</p>
-
-<h3>Valor</h3>
-<p>Mostre qual problema o produto ou serviço pretende resolver.</p>
-
-<h3>Confiança</h3>
-<p>Não invente resultados, depoimentos ou promessas de dinheiro fácil.</p>
-
-<h3>Transparência</h3>
-<p>Deixe condições importantes claras antes de qualquer compra.</p>
-
-<div class="tip">
-⚠️ Marketing responsável é mais sustentável do que promessas exageradas.
-</div>
-`,
-
-erros:`
-
-<h2>⚠️ Erros comuns</h2>
-
-<ul>
-
-<li>Copiar outros criadores sem desenvolver identidade.</li>
-
-<li>Trocar de nicho a cada poucos dias.</li>
-
-<li>Usar clickbait que não é entregue.</li>
-
-<li>Encher vídeos de efeitos sem necessidade.</li>
-
-<li>Usar hashtags aleatórias.</li>
-
-<li>Olhar somente visualizações.</li>
-
-<li>Desistir depois de poucos vídeos.</li>
-
-<li>Tentar melhorar dez coisas ao mesmo tempo.</li>
-
-</ul>
-
-<div class="tip">
-💡 Melhorar um elemento por vez torna o aprendizado muito mais fácil de medir.
-</div>
-`
 
 };
 
+const academyCards=document.getElementById("academyCards");
 
-/* MODAL */
+Object.keys(lessons).forEach(name=>{
 
-function openLesson(name){
+const l=lessons[name];
 
-    document.getElementById("lessonContent").innerHTML=lessons[name];
+academyCards.innerHTML+=`
 
-    document.getElementById("modal").classList.add("open");
+<div class="card">
 
-}
+<div style="font-size:32px">${l.icon}</div>
 
-function closeModal(){
+<h3>${name}</h3>
 
-    document.getElementById("modal").classList.remove("open");
+<p>Aprenda estratégias e conceitos importantes.</p>
 
-}
+<button class="btn alt"
+onclick="openLesson('${name}')">
+Saiba mais
+</button>
 
-document.getElementById("modal").addEventListener("click",function(e){
+</div>
 
-    if(e.target===this){
-        closeModal();
-    }
+`;
 
 });
 
 
-/* TOOLS */
+function openLesson(name){
 
-function topic(){
+document.getElementById("modalContent").innerHTML=`
 
-    return document.getElementById("toolTopic").value.trim() || "seu nicho";
+<h2>${lessons[name].icon} ${name}</h2>
+
+<p style="color:#b8c2d8;line-height:1.8">
+${lessons[name].text}
+</p>
+
+`;
+
+document.getElementById("modal").classList.add("active");
 
 }
+
+
+function closeModal(){
+
+document.getElementById("modal").classList.remove("active");
+
+}
+
+
+/* =====================================================
+   FERRAMENTAS
+===================================================== */
+
+function value(id){
+
+return document.getElementById(id).value.trim() || "seu tema";
+
+}
+
 
 function generateIdeas(){
 
-    const t=topic();
+const t=value("ideaInput");
 
-    document.getElementById("toolResult").textContent=
-`💡 IDEIAS PARA ${t.toUpperCase()}
+document.getElementById("ideaOutput").textContent=
 
-1. 5 erros que iniciantes cometem em ${t}
-2. O jeito mais simples de começar com ${t}
-3. 3 coisas que eu gostaria de saber antes de começar
-4. Tutorial completo para iniciantes em ${t}
-5. Mitos sobre ${t} que você precisa conhecer
-6. ${t}: o que fazer e o que evitar
-7. Testei uma estratégia de ${t} e veja o que aprendi
-8. A diferença entre iniciante e avançado em ${t}
-9. 3 ferramentas úteis para quem trabalha com ${t}
-10. Como melhorar seu resultado em ${t} passo a passo
+`1. 5 coisas que você precisa saber sobre ${t}
 
-💡 Dica:
-Escolha uma ideia e transforme-a em várias versões:
-tutorial, lista, comparação, demonstração ou storytelling.`;
+2. O maior erro de iniciantes em ${t}
+
+3. Guia de ${t} para iniciantes
+
+4. 3 dicas para melhorar em ${t}
+
+5. Testei ${t} e descobri isso
+
+6. Mitos e verdades sobre ${t}
+
+7. Antes e depois usando ${t}
+
+8. O que ninguém te explica sobre ${t}
+
+9. Como começar em ${t} do zero
+
+10. 5 coisas que eu faria diferente em ${t}`;
 
 }
+
 
 function generateHooks(){
 
-    const t=topic();
+const t=value("hookInput");
 
-    document.getElementById("toolResult").textContent=
-`🧲 HOOKS PARA ${t.toUpperCase()}
+document.getElementById("hookOutput").textContent=
 
-1. "Se você está começando com ${t}, presta atenção nisso."
+`• "Se você está começando em ${t}, veja isso."
 
-2. "Esse é um erro que muita gente comete quando começa com ${t}."
+• "Eu queria ter descoberto isso antes sobre ${t}."
 
-3. "Você sabe qual é a diferença entre fazer ${t} assim e assim?"
+• "3 coisas que podem melhorar seu ${t}."
 
-4. "Antes de tentar melhorar em ${t}, faça isso primeiro."
+• "O erro que muita gente comete em ${t}."
 
-5. "Eu queria ter descoberto isso quando comecei com ${t}."
+• "Antes de começar ${t}, saiba disso."
 
-6. "3 coisas que podem facilitar sua vida com ${t}."
+• "Você provavelmente está fazendo isso errado em ${t}."
 
-7. "Vamos testar uma forma diferente de fazer ${t}."
+• "Aqui está uma forma mais simples de entender ${t}."
 
-8. "Se você acha que ${t} é difícil, veja isso."
-
-9. "Aqui está o processo completo de ${t}, sem complicação."
-
-10. "Vou mostrar o que eu faria se estivesse começando ${t} hoje."
-
-⚠️ Use somente hooks que sejam verdadeiros para o conteúdo.`;
+• "Se eu começasse ${t} hoje, faria isso."`;
 
 }
 
-function generateScript(){
-
-    const t=topic();
-
-    const type=document.getElementById("toolType").value;
-
-    document.getElementById("toolResult").textContent=
-`📝 ROTEIRO — ${type.toUpperCase()}
-
-TEMA:
-${t}
-
-HOOK:
-"Se você está começando com ${t}, presta atenção nisso."
-
-CONTEXTO:
-Explique rapidamente qual problema ou objetivo o vídeo vai abordar.
-
-DESENVOLVIMENTO:
-1. Apresente o primeiro ponto.
-2. Mostre um exemplo.
-3. Explique o segundo ponto.
-4. Mostre outro exemplo.
-5. Entregue a principal conclusão.
-
-PAYOFF:
-Resuma o que a pessoa acabou de aprender.
-
-CTA:
-"Se isso foi útil, acompanhe os próximos conteúdos sobre ${t}."
-
-✂️ EDIÇÃO:
-• Remova pausas desnecessárias.
-• Destaque palavras importantes.
-• Use imagens ou gravações de tela quando ajudarem.
-• Revise as legendas.`;
-
-}
 
 function generateHashtags(){
 
-    const t=topic().toLowerCase().replace(/[^a-z0-9áéíóúãõç ]/gi,"");
+const t=value("hashInput")
+.toLowerCase()
+.replace(/[^a-zA-Z0-9À-ÿ ]/g,"")
+.replace(/\s+/g,"");
 
-    document.getElementById("toolResult").textContent=
-`#️⃣ HASHTAGS / PALAVRAS-CHAVE
+document.getElementById("hashOutput").textContent=
 
-Para: ${t}
-
-Sugestões de estrutura:
-
-#${t.replace(/\s+/g,"")}
-#criacaodeconteudo
+`#${t}
+#criador
 #conteudo
 #dicas
 #tutorial
-
-⚠️ Não copie tudo automaticamente.
-
-Escolha somente termos que realmente descrevem seu vídeo.
-
-Estratégia:
-• 1–2 termos do assunto principal
-• termos específicos do subtema
-• termos relacionados ao público
-
-O mais importante é a relevância do conteúdo.`;
+#aprendizado
+#criatividade`;
 
 }
 
 
-/* CHECKLIST */
+function generateScript(){
 
-function updateProgress(){
+const t=value("scriptInput");
 
-    const boxes=document.querySelectorAll("#checklist input");
+document.getElementById("scriptOutput").textContent=
 
-    let done=0;
+`ABERTURA:
+Apresente ${t} de forma clara.
 
-    boxes.forEach(box=>{
+CONTEXTO:
+Explique rapidamente por que o assunto importa.
 
-        if(box.checked) done++;
+DESENVOLVIMENTO:
+Mostre os principais pontos.
 
-    });
+EXEMPLO:
+Demonstre ${t} na prática.
 
-    const percent=Math.round((done/boxes.length)*100);
+CONCLUSÃO:
+Resuma a ideia principal.
 
-    document.getElementById("progressFill").style.width=percent+"%";
-
-    document.getElementById("progressText").textContent=
-    percent+"% concluído";
-
-}
-
-
-/* SEARCH */
-
-function searchLibrary(){
-
-    const value=document
-    .getElementById("search")
-    .value
-    .toLowerCase();
-
-    document
-    .querySelectorAll(".searchable")
-    .forEach(card=>{
-
-        card.classList.toggle(
-            "hidden",
-            !card.innerText.toLowerCase().includes(value)
-        );
-
-    });
+CTA:
+Faça uma pergunta relacionada ao conteúdo.`;
 
 }
 
 
-/* AI */
+/* =====================================================
+   BANCO DE PALAVRAS DA IA
+===================================================== */
+
+const WORDS={
+
+conversa:[
+"oi","olá","ola","hey","eai","e aí",
+"tudo bem","bom dia","boa tarde","boa noite",
+"obrigado","obrigada","valeu","tchau"
+],
+
+tiktok:[
+"tiktok","tik tok","video","vídeo","videos","vídeos",
+"seguidor","seguidores","curtida","curtidas","likes",
+"views","visualização","visualizações","comentário",
+"comentários","compartilhar","viral","viralizar",
+"trend","trends","algoritmo","foryou","fy","perfil","bio"
+],
+
+youtube:[
+"youtube","canal","inscrito","inscritos",
+"shorts","thumbnail","miniatura","titulo","título",
+"descrição","descricao","monetização","monetizar"
+],
+
+instagram:[
+"instagram","reels","story","stories","post",
+"postagem","direct","dm","explore","perfil","bio"
+],
+
+roblox:[
+"roblox","robux","roblox studio","studio",
+"obby","mapa","jogo","avatar","personagem",
+"script","lua","luau","part","model","tool",
+"spawn","checkpoint","teleporte","teleportar",
+"gamepass","marketplace"
+],
+
+programacao:[
+"programação","programacao","programar",
+"codigo","código","script","javascript",
+"python","html","css","lua","luau",
+"variável","variavel","função","funcao",
+"array","objeto","loop","bug","erro",
+"debug","programador"
+],
+
+ia:[
+"ia","ai","inteligência artificial",
+"inteligencia artificial","chatbot","modelo",
+"prompt","machine learning","automação",
+"automacao","api","assistente","bot"
+],
+
+computador:[
+"pc","computador","processador","cpu","gpu",
+"placa de vídeo","placa de video","placa mãe",
+"placa mae","ram","memória","memoria","ssd",
+"hd","fonte","cooler","temperatura","fps",
+"monitor","teclado","mouse","windows","driver"
+],
+
+jogos:[
+"jogo","games","game","gamer","jogar",
+"fps","ping","lag","servidor","rank",
+"partida","personagem","mapa","controle"
+],
+
+edicao:[
+"editar","edição","edicao","capcut",
+"premiere","after effects","transição",
+"transicao","efeito","corte","legenda",
+"audio","áudio","música","musica","imagem",
+"video","vídeo","zoom","filtro"
+],
+
+vendas:[
+"vender","venda","produto","cliente",
+"preço","preco","oferta","loja","negócio",
+"negocio","comprador","anúncio","anuncio"
+],
+
+marketing:[
+"marketing","público","publico","cliente",
+"nicho","marca","branding","campanha",
+"anúncio","anuncio","tráfego","trafego",
+"conversão","conversao","estratégia","estrategia"
+],
+
+dinheiro:[
+"dinheiro","ganhar","renda","lucro","custo",
+"preço","preco","economizar","investimento",
+"investir","salário","salario"
+],
+
+escola:[
+"escola","tarefa","trabalho","prova",
+"matéria","materia","matemática","matematica",
+"português","portugues","inglês","ingles",
+"história","historia","geografia","ciências",
+"ciencias","biologia","química","quimica",
+"física","fisica"
+],
+
+matematica:[
+"soma","somar","subtração","subtracao",
+"multiplicação","multiplicacao","divisão",
+"divisao","porcentagem","fração","fracao",
+"equação","equacao","número","numero",
+"calculo","cálculo","área","area",
+"perímetro","perimetro","ângulo","angulo",
+"geometria","álgebra","algebra"
+],
+
+ciencias:[
+"átomo","atomo","célula","celula","planeta",
+"energia","força","forca","matéria","materia",
+"animal","planta","corpo","universo",
+"sistema solar","espaço","espaco"
+],
+
+tecnologia:[
+"tecnologia","celular","smartphone",
+"aplicativo","app","internet","wifi",
+"bluetooth","software","hardware"
+],
+
+sites:[
+"site","website","página","pagina",
+"html","css","javascript","botão","botao",
+"menu","homepage","domínio","dominio",
+"servidor","github","github pages",
+"repositório","repositorio","commit",
+"branch","deploy","index.html"
+],
+
+design:[
+"design","logo","logotipo","cor","cores",
+"fonte","tipografia","layout","banner",
+"imagem","identidade visual"
+],
+
+esportes:[
+"futebol","basquete","corrida","treino",
+"jogador","time","partida","campeonato",
+"gol","ponto","bola","atleta"
+]
+
+};
+
+
+/* =====================================================
+   RESPOSTAS
+===================================================== */
+
+const RESPONSES={
+
+conversa:[
+"Olá! 👋 Como posso ajudar?",
+"E aí! 😎 O que você quer fazer?",
+"Olá! Pode mandar sua pergunta."
+],
+
+tiktok:[
+"Posso ajudar com TikTok, ideias, roteiros, edição, métricas e estratégias de conteúdo.",
+"Vamos focar exatamente no que você quer melhorar no TikTok."
+],
+
+youtube:[
+"Posso ajudar com YouTube, Shorts, títulos, thumbnails, roteiros e conteúdo.",
+"Se sua dúvida é sobre YouTube, me diga o que você quer melhorar."
+],
+
+instagram:[
+"Posso ajudar com Instagram, Reels, Stories, posts, bio e conteúdo."
+],
+
+roblox:[
+"Posso ajudar com Roblox, Roblox Studio, Luau, mapas, sistemas, checkpoints, teleporte e interfaces.",
+"Se estiver criando um jogo no Roblox Studio, me diga o sistema que você quer fazer."
+],
+
+programacao:[
+"Posso ajudar com programação, HTML, CSS, JavaScript, Python, Lua e Luau.",
+"Se existe um erro no seu código, mande o erro e explique o que deveria acontecer."
+],
+
+ia:[
+"Posso explicar inteligência artificial, prompts, modelos, automação, chatbots e APIs.",
+"IA pode ser usada para geração, análise, organização e automação."
+],
+
+computador:[
+"Posso ajudar com PC, Windows, hardware, FPS, temperatura, drivers e problemas técnicos.",
+"Me diga o que está acontecendo no computador e quando o problema aparece."
+],
+
+jogos:[
+"Posso ajudar com jogos, configurações, desempenho, estratégias e problemas técnicos."
+],
+
+edicao:[
+"Posso ajudar com CapCut, edição, cortes, transições, legendas, áudio e efeitos."
+],
+
+vendas:[
+"Posso ajudar com produtos, público, ofertas, preços, divulgação e atendimento de forma realista.",
+"Uma venda legítima deve deixar claro o produto, condições e benefícios reais."
+],
+
+marketing:[
+"Posso ajudar com público, posicionamento, conteúdo, divulgação e análise de resultados."
+],
+
+dinheiro:[
+"Posso explicar orçamento, custos, lucro e conceitos de negócios. Não existe método legítimo que garanta dinheiro rápido."
+],
+
+escola:[
+"Posso ajudar com assuntos escolares e explicar conceitos passo a passo."
+],
+
+matematica:[
+"Posso ajudar com matemática e explicar o raciocínio passo a passo."
+],
+
+ciencias:[
+"Posso explicar biologia, física, química, astronomia e outros conceitos científicos."
+],
+
+tecnologia:[
+"Posso ajudar com celulares, aplicativos, internet, software e hardware."
+],
+
+sites:[
+"Posso ajudar com HTML, CSS, JavaScript, GitHub, GitHub Pages e criação de sites."
+],
+
+design:[
+"Posso ajudar com logos, cores, fontes, identidade visual e layouts."
+],
+
+esportes:[
+"Posso ajudar com regras, técnicas, estratégias e conceitos de vários esportes."
+]
+
+};
+
+
+/* =====================================================
+   NORMALIZAR TEXTO
+===================================================== */
+
+function normalize(text){
+
+return text
+.toLowerCase()
+.normalize("NFD")
+.replace(/[\u0300-\u036f]/g,"");
+
+}
+
+
+/* =====================================================
+   DETECTAR ASSUNTO
+===================================================== */
+
+function detectTopic(text){
+
+const phrase=normalize(text);
+
+let best="desconhecido";
+let bestScore=0;
+
+for(const category in WORDS){
+
+let score=0;
+
+for(const word of WORDS[category]){
+
+const w=normalize(word);
+
+if(w.length>2 && phrase.includes(w)){
+
+score += w.includes(" ") ? 3 : 1;
+
+}
+
+}
+
+if(score>bestScore){
+
+bestScore=score;
+best=category;
+
+}
+
+}
+
+return best;
+
+}
+
+
+/* =====================================================
+   IA
+===================================================== */
+
+function generateAIAnswer(question){
+
+const q=normalize(question);
+
+if(!q.trim()){
+
+return "Digite uma pergunta para eu responder. 🤖";
+
+}
+
+const topic=detectTopic(question);
+
+if(topic==="desconhecido"){
+
+return `
+Ainda não reconheci exatamente o assunto.
+
+Tente explicar um pouco mais o que você quer
+fazer ou pergunte de outra maneira.
+
+Posso ajudar com assuntos como:
+Roblox, PC, programação, TikTok, YouTube,
+Instagram, IA, edição, sites, escola,
+matemática, tecnologia, vendas e muito mais.
+`;
+
+}
+
+let responses=RESPONSES[topic];
+
+let answer=responses[
+Math.floor(Math.random()*responses.length)
+];
+
+if(
+q.includes("como fazer") ||
+q.includes("como faco") ||
+q.includes("tutorial") ||
+q.includes("ensina")
+){
+
+answer +=
+"\n\n📚 Posso transformar isso em um tutorial passo a passo.";
+
+}
+
+else if(
+q.includes("o que e") ||
+q.includes("o que é")
+){
+
+answer +=
+"\n\n💡 Se quiser, posso explicar esse conceito de forma mais simples ou mais detalhada.";
+
+}
+
+else if(
+q.includes("erro") ||
+q.includes("nao funciona") ||
+q.includes("não funciona") ||
+q.includes("bug")
+){
+
+answer +=
+"\n\n🔧 Me diga exatamente o erro ou o que acontece para eu tentar encontrar a causa.";
+
+}
+
+return answer;
+
+}
+
+
+/* =====================================================
+   MEMÓRIA
+===================================================== */
+
+let memory=
+JSON.parse(
+localStorage.getItem("vinlumexz_ai_memory") || "[]"
+);
+
+
+function saveMemory(question,answer){
+
+memory.push({
+
+question:question,
+answer:answer,
+time:Date.now()
+
+});
+
+if(memory.length>100){
+
+memory.shift();
+
+}
+
+localStorage.setItem(
+"vinlumexz_ai_memory",
+JSON.stringify(memory)
+);
+
+}
+
+
+/* =====================================================
+   CHAT
+===================================================== */
 
 function addMessage(text,type){
 
-    const chat=document.getElementById("chat");
+const box=document.getElementById("messages");
 
-    const div=document.createElement("div");
+const div=document.createElement("div");
 
-    div.className="message "+type;
+div.className="msg "+type;
 
-    div.textContent=text;
+div.textContent=text;
 
-    chat.appendChild(div);
+box.appendChild(div);
 
-    chat.scrollTop=chat.scrollHeight;
-
-}
-
-
-function quickAI(text){
-
-    document.getElementById("aiInput").value=text;
-
-    sendAI();
+box.scrollTop=box.scrollHeight;
 
 }
 
 
 function sendAI(){
 
-    const input=document.getElementById("aiInput");
+const input=document.getElementById("chatInput");
 
-    const text=input.value.trim();
+const question=input.value.trim();
 
-    if(!text) return;
+if(!question)return;
 
-    addMessage(text,"user");
+addMessage(question,"user");
 
-    input.value="";
+input.value="";
 
-    setTimeout(()=>{
+const answer=generateAIAnswer(question);
 
-        addMessage(aiAnswer(text),"bot");
+setTimeout(()=>{
 
-    },350);
+addMessage(answer,"ai");
+
+saveMemory(question,answer);
+
+},250);
 
 }
 
 
-function aiAnswer(input){
+/* =====================================================
+   ROADMAP
+===================================================== */
 
-    const q=input.toLowerCase();
+let currentStep=
+Number(
+localStorage.getItem("vinlumexz_step") || 0
+);
 
-    if(
-        q.includes("ideia") ||
-        q.includes("ideias")
-    ){
 
-        return `💡 IDEIAS DE CONTEÚDO
+function updateProgress(){
 
-Aqui estão algumas estruturas que você pode adaptar:
+document.getElementById("progressBar").style.width=
+(currentStep/6*100)+"%";
 
-1. 3 erros de iniciantes
-2. Tutorial passo a passo
-3. Antes e depois
-4. Comparação entre duas formas
-5. Coisas que eu gostaria de saber antes
-6. Teste de uma estratégia
-7. Respondendo uma dúvida
-8. Lista de ferramentas
-9. Mitos e verdades
-10. Desafio de aprendizado
-
-Escolha uma delas e adapte ao seu nicho.
-
-Se quiser, diga seu nicho e eu posso criar ideias mais específicas.`;
-
-    }
-
-
-    if(
-        q.includes("hook") ||
-        q.includes("prender") ||
-        q.includes("atenção")
-    ){
-
-        return `🧲 HOOKS
-
-Experimente diferentes abordagens:
-
-• Pergunta:
-"Você sabe por que isso acontece?"
-
-• Problema:
-"Se você está começando, provavelmente já encontrou esse problema."
-
-• Curiosidade:
-"Existe um detalhe aqui que muita gente ignora."
-
-• Demonstração:
-Mostre imediatamente o que você vai explicar.
-
-• Comparação:
-"Olha a diferença entre essas duas formas."
-
-• Lista:
-"3 coisas que você precisa saber antes de começar."
-
-O hook deve criar uma expectativa que o vídeo realmente cumpra.`;
-
-    }
-
-
-    if(
-        q.includes("retenção") ||
-        q.includes("retencao")
-    ){
-
-        return `⏱️ RETENÇÃO
-
-Pense no vídeo como uma sequência:
-
-HOOK
-↓
-CONTEXTO
-↓
-DESENVOLVIMENTO
-↓
-EXEMPLOS
-↓
-PAYOFF
-↓
-CTA
-
-Para melhorar:
-
-• elimine enrolação;
-• faça cada trecho acrescentar algo;
-• use exemplos;
-• varie elementos visuais quando necessário;
-• entregue a conclusão prometida.
-
-Não tente simplesmente "segurar" a pessoa sem entregar valor.`;
-
-    }
-
-
-    if(
-        q.includes("hashtag") ||
-        q.includes("#")
-    ){
-
-        return `#️⃣ HASHTAGS
-
-Use hashtags relacionadas ao assunto real do vídeo.
-
-Uma estrutura simples:
-
-• tema principal;
-• subtema específico;
-• termos relacionados ao público.
-
-Evite usar muitas hashtags aleatórias.
-
-Hashtags podem ajudar a contextualizar o conteúdo, mas não garantem viralização.`;
-
-    }
-
-
-    if(
-        q.includes("roteiro") ||
-        q.includes("script")
-    ){
-
-        return `📝 ESTRUTURA DE ROTEIRO
-
-HOOK:
-Apresente rapidamente o assunto.
-
-CONTEXTO:
-Explique o problema.
-
-DESENVOLVIMENTO:
-Mostre os passos ou argumentos.
-
-EXEMPLOS:
-Demonstre.
-
-PAYOFF:
-Entregue a conclusão.
-
-CTA:
-Faça um convite relevante ao conteúdo.
-
-Se você me disser o tema, posso adaptar essa estrutura.`;
-
-    }
-
-
-    if(
-        q.includes("edição") ||
-        q.includes("edicao")
-    ){
-
-        return `✂️ EDIÇÃO
-
-Prioridades:
-
-1. Áudio claro
-2. Cortes necessários
-3. Texto legível
-4. Legendas revisadas
-5. Imagens de apoio
-6. Ritmo adequado
-
-Não coloque efeitos apenas porque eles existem.
-
-Pergunte:
-"Esse efeito ajuda a pessoa a entender ou apenas deixa o vídeo mais cheio?"`;
-
-    }
-
-
-    if(
-        q.includes("viral") ||
-        q.includes("viralizar")
-    ){
-
-        return `🚀 SOBRE VIRALIZAÇÃO
-
-Não existe uma fórmula que garanta determinado número de visualizações.
-
-Em vez de procurar um "hack secreto", trabalhe em:
-
-• tema relevante;
-• apresentação clara;
-• hook;
-• entrega de valor;
-• retenção;
-• qualidade técnica;
-• interação;
-• testes;
-• análise dos resultados.
-
-E lembre:
-um único vídeo não define sua capacidade como criador.`;
-
-    }
-
-
-    if(
-        q.includes("dinheiro") ||
-        q.includes("vender") ||
-        q.includes("vendas")
-    ){
-
-        return `💰 PROJETOS E VENDAS
-
-Comece pelo valor:
-
-1. Qual problema existe?
-2. Para quem?
-3. Qual solução você oferece?
-4. Por que ela é útil?
-5. Quais são as condições?
-
-Evite promessas de dinheiro fácil ou resultados garantidos.
-
-Construir habilidade, confiança e um projeto real é muito mais importante
-do que procurar uma fórmula rápida.`;
-
-    }
-
-
-    return `🤖 ENTENDI SUA PERGUNTA
-
-Posso ajudar principalmente com:
-
-• ideias
-• hooks
-• retenção
-• roteiros
-• storytelling
-• edição
-• hashtags
-• analytics
-• estratégia
-• criação de conteúdo
-
-Tente perguntar algo como:
-
-"Me dê ideias para Roblox"
-
-"Crie 10 hooks para IA"
-
-"Como melhorar minha retenção?"
-
-"Crie um roteiro sobre edição"
-
-"Como escolher hashtags?"
-
-Se quiser uma resposta específica, diga também o seu nicho.`;
+document.getElementById("stepText").textContent=
+currentStep+"/6 concluídas";
 
 }
+
+
+function nextStep(){
+
+if(currentStep<6){
+
+currentStep++;
+
+}
+
+localStorage.setItem(
+"vinlumexz_step",
+currentStep
+);
+
+updateProgress();
+
+}
+
+updateProgress();
+
+
+/* =====================================================
+   FECHAR MODAL CLICANDO FORA
+===================================================== */
+
+document.getElementById("modal").addEventListener(
+"click",
+function(e){
+
+if(e.target===this){
+
+closeModal();
+
+}
+
+});
+
 
 </script>
 
