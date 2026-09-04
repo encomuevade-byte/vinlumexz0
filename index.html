@@ -3,642 +3,585 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>VINLUMEXZ — Creator Academy</title>
 
+<meta name="description" content="VINLUMEXZ — aprenda criação de conteúdo, edição, IA, Roblox, programação, tecnologia e marketing.">
+
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+:root{
+  --bg:#05070d;
+  --bg2:#0a0e18;
+  --card:#0d1422;
+  --card2:#111a2b;
+  --text:#f5f7ff;
+  --muted:#9ca9bf;
+  --cyan:#00eaff;
+  --purple:#8b5cf6;
+  --green:#21e58b;
+  --red:#ff5577;
+  --border:rgba(255,255,255,.09);
+  --shadow:0 15px 45px rgba(0,0,0,.35);
 }
 
-:root{
-    --bg:#060812;
-    --bg2:#0b1020;
-    --card:#10172a;
-    --card2:#151d34;
-    --text:#f5f7ff;
-    --muted:#9da8c4;
-    --cyan:#00e5ff;
-    --purple:#8b5cf6;
-    --green:#22c55e;
-    --border:rgba(255,255,255,.09);
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 html{
-    scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:
-        radial-gradient(circle at 20% 10%,rgba(0,229,255,.10),transparent 30%),
-        radial-gradient(circle at 80% 20%,rgba(139,92,246,.12),transparent 30%),
-        var(--bg);
-    color:var(--text);
-    line-height:1.6;
+  font-family:Arial,Helvetica,sans-serif;
+  background:
+    radial-gradient(circle at 15% 10%,rgba(0,234,255,.10),transparent 28%),
+    radial-gradient(circle at 85% 20%,rgba(139,92,246,.12),transparent 30%),
+    var(--bg);
+  color:var(--text);
+  line-height:1.6;
 }
 
 button,
 input,
 textarea{
-    font:inherit;
+  font:inherit;
 }
 
 button{
-    cursor:pointer;
+  cursor:pointer;
 }
 
 a{
-    color:inherit;
-    text-decoration:none;
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+  width:min(1180px,92%);
+  margin:auto;
 }
 
 /* HEADER */
 
 header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:rgba(6,8,18,.88);
-    backdrop-filter:blur(16px);
-    border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  z-index:100;
+  backdrop-filter:blur(18px);
+  background:rgba(5,7,13,.82);
+  border-bottom:1px solid var(--border);
 }
 
 .nav{
-    max-width:1200px;
-    margin:auto;
-    min-height:70px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 20px;
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
 
 .logo{
-    font-size:22px;
-    font-weight:900;
-    letter-spacing:1px;
+  font-size:22px;
+  font-weight:900;
+  letter-spacing:1px;
+  background:linear-gradient(90deg,var(--cyan),#fff,var(--purple));
+  -webkit-background-clip:text;
+  color:transparent;
 }
 
-.logo span{
-    color:var(--cyan);
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:22px;
 }
 
-nav{
-    display:flex;
-    gap:22px;
+.nav-links a{
+  color:#c7d0df;
+  font-size:14px;
+  transition:.2s;
 }
 
-nav a{
-    color:var(--muted);
-    font-size:14px;
+.nav-links a:hover{
+  color:var(--cyan);
 }
 
-nav a:hover{
-    color:var(--cyan);
+.menu-btn{
+  display:none;
+  background:none;
+  border:0;
+  color:white;
+  font-size:25px;
 }
 
 /* HERO */
 
 .hero{
-    min-height:650px;
-    max-width:1200px;
-    margin:auto;
-    padding:100px 20px 80px;
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:50px;
-    align-items:center;
+  padding:100px 0 80px;
+  text-align:center;
 }
 
 .badge{
-    display:inline-block;
-    padding:7px 13px;
-    border:1px solid rgba(0,229,255,.25);
-    background:rgba(0,229,255,.07);
-    color:var(--cyan);
-    border-radius:30px;
-    font-size:13px;
-    margin-bottom:20px;
+  display:inline-block;
+  padding:7px 13px;
+  border:1px solid rgba(0,234,255,.25);
+  background:rgba(0,234,255,.07);
+  border-radius:999px;
+  color:var(--cyan);
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:20px;
 }
 
 .hero h1{
-    font-size:clamp(42px,7vw,78px);
-    line-height:1;
-    margin-bottom:22px;
+  font-size:clamp(42px,8vw,82px);
+  line-height:1;
+  font-weight:1000;
+  margin-bottom:22px;
 }
 
 .gradient{
-    background:linear-gradient(90deg,var(--cyan),var(--purple));
-    -webkit-background-clip:text;
-    color:transparent;
+  background:linear-gradient(90deg,var(--cyan),#ffffff,var(--purple));
+  -webkit-background-clip:text;
+  color:transparent;
 }
 
 .hero p{
-    color:var(--muted);
-    font-size:18px;
-    max-width:650px;
-    margin-bottom:30px;
+  max-width:720px;
+  margin:auto;
+  color:var(--muted);
+  font-size:18px;
 }
 
-.buttons{
-    display:flex;
-    flex-wrap:wrap;
-    gap:12px;
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin-top:30px;
+  flex-wrap:wrap;
 }
 
 .btn{
-    border:0;
-    border-radius:12px;
-    padding:13px 20px;
-    font-weight:800;
+  border:0;
+  border-radius:12px;
+  padding:13px 20px;
+  font-weight:800;
+  transition:.2s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
 }
 
 .btn-primary{
-    background:var(--cyan);
-    color:#001015;
+  color:#001016;
+  background:var(--cyan);
+  box-shadow:0 0 30px rgba(0,234,255,.18);
 }
 
 .btn-secondary{
-    background:var(--card2);
-    border:1px solid var(--border);
-    color:white;
-}
-
-/* HERO CARD */
-
-.hero-card{
-    background:linear-gradient(
-        145deg,
-        rgba(0,229,255,.08),
-        rgba(139,92,246,.10)
-    );
-    border:1px solid var(--border);
-    border-radius:25px;
-    padding:30px;
-}
-
-.hero-card h3{
-    font-size:24px;
-    margin-bottom:18px;
-}
-
-.stat{
-    display:flex;
-    justify-content:space-between;
-    padding:15px 0;
-    border-bottom:1px solid var(--border);
-}
-
-.stat:last-child{
-    border-bottom:0;
-}
-
-.stat span{
-    color:var(--muted);
-}
-
-.progress{
-    height:9px;
-    background:#20283d;
-    border-radius:20px;
-    overflow:hidden;
-    margin-top:10px;
-}
-
-.progress-bar{
-    height:100%;
-    width:0%;
-    background:linear-gradient(90deg,var(--cyan),var(--purple));
-    transition:.5s;
+  background:#111827;
+  color:white;
+  border:1px solid var(--border);
 }
 
 /* SECTIONS */
 
 section{
-    max-width:1200px;
-    margin:auto;
-    padding:80px 20px;
+  padding:70px 0;
 }
 
 .section-title{
-    margin-bottom:35px;
-}
-
-.section-title small{
-    color:var(--cyan);
-    text-transform:uppercase;
-    font-weight:bold;
-    letter-spacing:2px;
+  text-align:center;
+  margin-bottom:42px;
 }
 
 .section-title h2{
-    font-size:38px;
-    margin-top:5px;
+  font-size:36px;
+  margin-bottom:8px;
 }
 
 .section-title p{
-    color:var(--muted);
+  color:var(--muted);
 }
 
 /* CARDS */
 
 .grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
 }
 
 .card{
-    background:linear-gradient(
-        145deg,
-        var(--card),
-        rgba(16,23,42,.65)
-    );
-    border:1px solid var(--border);
-    border-radius:18px;
-    padding:24px;
-    transition:.25s;
+  background:linear-gradient(145deg,var(--card),var(--bg2));
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:24px;
+  box-shadow:var(--shadow);
+  transition:.25s;
 }
 
 .card:hover{
-    transform:translateY(-5px);
-    border-color:rgba(0,229,255,.3);
+  transform:translateY(-5px);
+  border-color:rgba(0,234,255,.3);
 }
 
 .icon{
-    width:48px;
-    height:48px;
-    border-radius:13px;
-    display:grid;
-    place-items:center;
-    background:rgba(0,229,255,.09);
-    font-size:24px;
-    margin-bottom:17px;
+  width:45px;
+  height:45px;
+  display:grid;
+  place-items:center;
+  border-radius:12px;
+  background:rgba(0,234,255,.09);
+  margin-bottom:17px;
+  font-size:21px;
 }
 
 .card h3{
-    margin-bottom:8px;
+  margin-bottom:8px;
 }
 
 .card p{
-    color:var(--muted);
-    font-size:14px;
+  color:var(--muted);
+  font-size:14px;
 }
 
 .card button{
-    margin-top:18px;
-    width:100%;
-    padding:11px;
-    border-radius:10px;
-    background:#19223a;
-    color:white;
-    border:1px solid var(--border);
+  margin-top:18px;
+}
+
+/* PROGRESS */
+
+.progress-box{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:25px;
+  max-width:800px;
+  margin:auto;
+}
+
+.progress-top{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:12px;
+  font-weight:bold;
+}
+
+.progress{
+  height:12px;
+  background:#171f2f;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.progress-fill{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,var(--cyan),var(--purple));
+  transition:.5s;
 }
 
 /* TOOLS */
 
-.tool-box{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:20px;
-    padding:25px;
-    margin-bottom:18px;
+.tool-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
 }
 
-.tool-box h3{
-    margin-bottom:7px;
+.tool{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:25px;
 }
 
-.tool-box p{
-    color:var(--muted);
-    font-size:14px;
-    margin-bottom:15px;
+.tool h3{
+  margin-bottom:7px;
 }
 
-.tool-row{
-    display:flex;
-    gap:10px;
+.tool p{
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:15px;
 }
 
-.tool-row input{
-    flex:1;
-    background:#080d1b;
-    color:white;
-    border:1px solid var(--border);
-    border-radius:10px;
-    padding:12px;
-    outline:none;
+.input{
+  width:100%;
+  background:#080d17;
+  color:white;
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:12px;
+  outline:none;
+  margin-bottom:10px;
 }
 
-.tool-row button{
-    background:var(--cyan);
-    color:#001015;
-    border:0;
-    border-radius:10px;
-    padding:0 18px;
-    font-weight:bold;
+.input:focus{
+  border-color:var(--cyan);
+}
+
+textarea.input{
+  min-height:100px;
+  resize:vertical;
 }
 
 .result{
-    display:none;
-    margin-top:15px;
-    padding:15px;
-    border-radius:12px;
-    background:#080d1b;
-    border:1px solid var(--border);
-    white-space:pre-wrap;
+  margin-top:15px;
+  padding:15px;
+  background:#080d17;
+  border-radius:12px;
+  border:1px solid var(--border);
+  color:#dce5f4;
+  white-space:pre-wrap;
 }
 
 /* AI */
 
-.ai-wrap{
-    background:
-        radial-gradient(
-            circle at 80% 0%,
-            rgba(139,92,246,.16),
-            transparent 35%
-        ),
-        var(--card);
-    border:1px solid var(--border);
-    border-radius:24px;
-    overflow:hidden;
+.ai-box{
+  max-width:900px;
+  margin:auto;
+  background:linear-gradient(145deg,#0c1321,#080c15);
+  border:1px solid rgba(0,234,255,.18);
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
 }
 
-.ai-head{
-    padding:22px 24px;
-    border-bottom:1px solid var(--border);
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+.ai-header{
+  padding:18px 20px;
+  border-bottom:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  gap:12px;
 }
 
 .ai-status{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    color:#8ee6a8;
-    font-size:13px;
-}
-
-.dot{
-    width:9px;
-    height:9px;
-    border-radius:50%;
-    background:var(--green);
-    box-shadow:0 0 12px var(--green);
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:var(--green);
+  box-shadow:0 0 12px var(--green);
 }
 
 .chat{
-    height:500px;
-    overflow-y:auto;
-    padding:25px;
-    display:flex;
-    flex-direction:column;
-    gap:14px;
+  height:430px;
+  overflow-y:auto;
+  padding:20px;
 }
 
 .message{
-    max-width:82%;
-    padding:13px 16px;
-    border-radius:15px;
-    white-space:pre-wrap;
-    word-wrap:break-word;
+  display:flex;
+  margin-bottom:14px;
 }
 
 .message.user{
-    align-self:flex-end;
-    background:linear-gradient(135deg,#00a9bd,#087fce);
-    color:white;
-    border-bottom-right-radius:4px;
+  justify-content:flex-end;
 }
 
-.message.ai{
-    align-self:flex-start;
-    background:#19223a;
-    border:1px solid var(--border);
-    border-bottom-left-radius:4px;
+.bubble{
+  max-width:78%;
+  padding:11px 14px;
+  border-radius:14px;
+  background:#111a2a;
+  color:#e8edf7;
+  white-space:pre-wrap;
 }
 
-.message.system{
-    align-self:center;
-    color:var(--muted);
-    font-size:13px;
-    text-align:center;
+.message.user .bubble{
+  background:#07343c;
+  border:1px solid rgba(0,234,255,.16);
 }
 
-.chat-input{
-    display:flex;
-    gap:10px;
-    padding:18px;
-    border-top:1px solid var(--border);
-    background:#0a0f1d;
+.ai-input{
+  display:flex;
+  gap:10px;
+  padding:15px;
+  border-top:1px solid var(--border);
 }
 
-.chat-input textarea{
-    flex:1;
-    resize:none;
-    height:52px;
-    background:#11182b;
-    color:white;
-    border:1px solid var(--border);
-    border-radius:12px;
-    padding:14px;
-    outline:none;
+.ai-input input{
+  flex:1;
+  background:#080d17;
+  color:white;
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:12px;
+  outline:none;
 }
 
-.send{
-    width:110px;
-    border:0;
-    border-radius:12px;
-    background:var(--cyan);
-    color:#001015;
-    font-weight:900;
+.ai-input input:focus{
+  border-color:var(--cyan);
 }
 
 /* GLOSSARY */
 
 .glossary{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:12px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
 }
 
 .term{
-    padding:16px;
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:12px;
+  padding:18px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
 }
 
-.term b{
-    color:var(--cyan);
+.term strong{
+  color:var(--cyan);
 }
 
 .term p{
-    color:var(--muted);
-    font-size:13px;
-    margin-top:5px;
+  color:var(--muted);
+  font-size:14px;
+  margin-top:5px;
 }
 
 /* FAQ */
 
 .faq{
-    border:1px solid var(--border);
-    border-radius:13px;
-    overflow:hidden;
-    background:var(--card);
-    margin-bottom:10px;
+  max-width:850px;
+  margin:auto;
 }
 
-.faq button{
-    width:100%;
-    padding:18px;
-    border:0;
-    background:none;
-    color:white;
-    text-align:left;
-    display:flex;
-    justify-content:space-between;
-    font-weight:bold;
+details{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:13px;
+  margin-bottom:10px;
+  padding:16px 18px;
 }
 
-.faq div{
-    display:none;
-    padding:0 18px 18px;
-    color:var(--muted);
-    font-size:14px;
+summary{
+  cursor:pointer;
+  font-weight:bold;
 }
 
-.faq.open div{
-    display:block;
+details p{
+  color:var(--muted);
+  margin-top:10px;
 }
 
 /* MODAL */
 
 .modal{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.75);
-    display:none;
-    align-items:center;
-    justify-content:center;
-    z-index:2000;
-    padding:20px;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.75);
+  backdrop-filter:blur(8px);
+  z-index:200;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
 }
 
-.modal.show{
-    display:flex;
+.modal.active{
+  display:flex;
 }
 
-.modal-box{
-    max-width:700px;
-    width:100%;
-    max-height:85vh;
-    overflow:auto;
-    background:#0d1425;
-    border:1px solid var(--border);
-    border-radius:20px;
-    padding:28px;
-}
-
-.modal-top{
-    display:flex;
-    justify-content:space-between;
+.modal-content{
+  width:min(700px,100%);
+  max-height:85vh;
+  overflow-y:auto;
+  background:#0b111e;
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:28px;
+  position:relative;
 }
 
 .close{
-    background:#202941;
-    border:0;
-    color:white;
-    width:38px;
-    height:38px;
-    border-radius:10px;
+  position:absolute;
+  right:18px;
+  top:15px;
+  background:none;
+  border:0;
+  color:white;
+  font-size:25px;
 }
 
-.lesson-content{
-    color:var(--muted);
-    margin-top:20px;
+.lesson-list{
+  margin-top:20px;
 }
 
-.lesson-content strong{
-    color:white;
+.lesson-list li{
+  margin:10px 0;
+  color:#cdd6e5;
 }
 
 /* FOOTER */
 
 footer{
-    border-top:1px solid var(--border);
-    padding:35px 20px;
-    text-align:center;
-    color:var(--muted);
+  padding:45px 0;
+  border-top:1px solid var(--border);
+  text-align:center;
+  color:var(--muted);
 }
 
-footer b{
-    color:white;
+footer strong{
+  color:white;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 
 @media(max-width:850px){
 
-    nav{
-        display:none;
-    }
+  .grid{
+    grid-template-columns:1fr 1fr;
+  }
 
-    .hero{
-        grid-template-columns:1fr;
-        padding-top:70px;
-    }
+  .glossary{
+    grid-template-columns:1fr 1fr;
+  }
 
-    .grid{
-        grid-template-columns:1fr 1fr;
-    }
+  .nav-links{
+    display:none;
+  }
 
-    .glossary{
-        grid-template-columns:1fr 1fr;
-    }
+  .menu-btn{
+    display:block;
+  }
+
 }
 
-@media(max-width:550px){
+@media(max-width:600px){
 
-    .hero h1{
-        font-size:45px;
-    }
+  .hero{
+    padding:70px 0 50px;
+  }
 
-    .grid{
-        grid-template-columns:1fr;
-    }
+  .grid,
+  .tool-grid,
+  .glossary{
+    grid-template-columns:1fr;
+  }
 
-    .glossary{
-        grid-template-columns:1fr;
-    }
+  section{
+    padding:50px 0;
+  }
 
-    .tool-row{
-        flex-direction:column;
-    }
+  .section-title h2{
+    font-size:29px;
+  }
 
-    .tool-row button{
-        padding:12px;
-    }
+  .hero p{
+    font-size:16px;
+  }
 
-    .chat{
-        height:450px;
-    }
+  .ai-input{
+    flex-direction:column;
+  }
 
-    .message{
-        max-width:92%;
-    }
-
-    .chat-input{
-        flex-direction:column;
-    }
-
-    .send{
-        width:100%;
-        height:48px;
-    }
+  .bubble{
+    max-width:90%;
+  }
 }
 </style>
 </head>
@@ -646,1377 +589,1393 @@ footer b{
 <body>
 
 <header>
+  <div class="container nav">
 
-<div class="nav">
+    <a href="#inicio" class="logo">VINLUMEXZ</a>
 
-<a href="#inicio" class="logo">
-VIN<span>LUMEXZ</span>
-</a>
+    <nav class="nav-links">
+      <a href="#academia">Academia</a>
+      <a href="#ferramentas">Ferramentas</a>
+      <a href="#ia">VINLUMEXZ AI</a>
+      <a href="#glossario">Glossário</a>
+      <a href="#faq">FAQ</a>
+    </nav>
 
-<nav>
-<a href="#academia">Academia</a>
-<a href="#ferramentas">Ferramentas</a>
-<a href="#ia">IA</a>
-<a href="#glossario">Glossário</a>
-<a href="#faq">FAQ</a>
-</nav>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
 
-</div>
-
+  </div>
 </header>
-
 
 <main>
 
 <!-- HERO -->
 
-<div class="hero" id="inicio">
+<section class="hero" id="inicio">
+  <div class="container">
 
-<div>
+    <span class="badge">🚀 ACADEMIA VINLUMEXZ</span>
 
-<div class="badge">
-🚀 VINLUMEXZ CREATOR ACADEMY
-</div>
+    <h1>
+      DO <span class="gradient">NOOB</span><br>
+      AO PRO.
+    </h1>
 
-<h1>
-Do <span class="gradient">NOOB</span><br>
-ao PRO.
-</h1>
+    <p>
+      Aprenda criação de conteúdo, edição, inteligência artificial,
+      Roblox, programação, tecnologia, marketing e muito mais.
+    </p>
 
-<p>
-Aprenda criação de conteúdo, edição, IA, Roblox,
-programação, tecnologia, marketing e muito mais.
-Tudo em um só lugar.
-</p>
+    <div class="hero-buttons">
+      <a href="#academia" class="btn btn-primary">
+        Começar agora
+      </a>
 
-<div class="buttons">
+      <a href="#ferramentas" class="btn btn-secondary">
+        Ver ferramentas
+      </a>
+    </div>
 
-<a href="#academia" class="btn btn-primary">
-Começar agora
-</a>
+  </div>
+</section>
 
-<a href="#ia" class="btn btn-secondary">
-Falar com a IA
-</a>
+<!-- PROGRESSO -->
 
-</div>
+<section>
+  <div class="container">
 
-</div>
+    <div class="section-title">
+      <h2>Seu progresso</h2>
+      <p>Complete as aulas e avance do Noob ao Pro.</p>
+    </div>
 
+    <div class="progress-box">
 
-<div class="hero-card">
+      <div class="progress-top">
+        <span id="levelText">Nível: Noob</span>
+        <span id="progressText">0%</span>
+      </div>
 
-<h3>📈 Seu progresso</h3>
+      <div class="progress">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
 
-<div class="stat">
-<span>Aulas concluídas</span>
-<b id="completedCount">0/15</b>
-</div>
+    </div>
 
-<div class="progress">
-<div class="progress-bar" id="progressBar"></div>
-</div>
-
-<div class="stat">
-<span>Nível</span>
-<b id="levelText">NOOB</b>
-</div>
-
-<div class="stat">
-<span>Plataforma</span>
-<b>VINLUMEXZ</b>
-</div>
-
-</div>
-
-</div>
-
+  </div>
+</section>
 
 <!-- ACADEMIA -->
 
 <section id="academia">
 
-<div class="section-title">
+  <div class="container">
 
-<small>Aprenda</small>
+    <div class="section-title">
+      <h2>🎓 Academia</h2>
+      <p>Aprenda os fundamentos que levam um criador do zero ao profissional.</p>
+    </div>
 
-<h2>Creator Academy</h2>
+    <div class="grid" id="academyGrid"></div>
 
-<p>
-15 aulas para construir uma base forte.
-</p>
-
-</div>
-
-<div class="grid" id="academyGrid"></div>
+  </div>
 
 </section>
-
 
 <!-- FERRAMENTAS -->
 
 <section id="ferramentas">
 
-<div class="section-title">
+  <div class="container">
 
-<small>Ferramentas</small>
+    <div class="section-title">
+      <h2>🛠️ Ferramentas</h2>
+      <p>Use ferramentas simples para acelerar sua criação.</p>
+    </div>
 
-<h2>Crie mais rápido</h2>
+    <div class="tool-grid">
 
-<p>
-Ferramentas simples para tirar ideias do papel.
-</p>
+      <!-- IDEIAS -->
 
-</div>
+      <div class="tool">
 
+        <h3>💡 Gerador de ideias</h3>
 
-<div class="tool-box">
+        <p>
+          Digite seu nicho e receba ideias de conteúdo.
+        </p>
 
-<h3>💡 Gerador de ideias</h3>
+        <input
+          class="input"
+          id="ideaInput"
+          placeholder="Ex: Roblox, futebol, tecnologia..."
+        >
 
-<p>
-Digite seu nicho e receba ideias de conteúdo.
-</p>
+        <button
+          class="btn btn-primary"
+          onclick="generateIdeas()"
+        >
+          Gerar ideias
+        </button>
 
-<div class="tool-row">
+        <div class="result" id="ideaResult">
+          Suas ideias aparecerão aqui.
+        </div>
 
-<input
-id="ideaInput"
-placeholder="Ex: Roblox, futebol, tecnologia..."
->
+      </div>
 
-<button onclick="generateIdeas()">
-Gerar
-</button>
+      <!-- HOOKS -->
 
-</div>
+      <div class="tool">
 
-<div class="result" id="ideaResult"></div>
+        <h3>🎯 Gerador de Hooks</h3>
 
-</div>
+        <p>
+          Crie aberturas para prender a atenção sem prometer algo falso.
+        </p>
 
+        <input
+          class="input"
+          id="hookInput"
+          placeholder="Ex: tutorial de Roblox"
+        >
 
-<div class="tool-box">
+        <button
+          class="btn btn-primary"
+          onclick="generateHooks()"
+        >
+          Gerar hooks
+        </button>
 
-<h3>🪝 Gerador de Hooks</h3>
+        <div class="result" id="hookResult">
+          Seus hooks aparecerão aqui.
+        </div>
 
-<p>
-Crie aberturas que despertem curiosidade.
-</p>
+      </div>
 
-<div class="tool-row">
+      <!-- HASHTAGS -->
 
-<input
-id="hookInput"
-placeholder="Ex: vídeo sobre Roblox"
->
+      <div class="tool">
 
-<button onclick="generateHooks()">
-Gerar
-</button>
+        <h3>#️⃣ Hashtags</h3>
 
-</div>
+        <p>
+          Gere hashtags relacionadas ao tema do conteúdo.
+        </p>
 
-<div class="result" id="hookResult"></div>
+        <input
+          class="input"
+          id="hashInput"
+          placeholder="Ex: edição de vídeo"
+        >
 
-</div>
+        <button
+          class="btn btn-primary"
+          onclick="generateHashtags()"
+        >
+          Gerar hashtags
+        </button>
 
+        <div class="result" id="hashResult">
+          Suas hashtags aparecerão aqui.
+        </div>
 
-<div class="tool-box">
+      </div>
 
-<h3>#️⃣ Gerador de hashtags</h3>
+      <!-- ROTEIRO -->
 
-<p>
-Use hashtags relacionadas ao conteúdo.
-</p>
+      <div class="tool">
 
-<div class="tool-row">
+        <h3>📝 Gerador de roteiro</h3>
 
-<input
-id="hashInput"
-placeholder="Ex: edição de vídeo"
->
+        <p>
+          Monte uma estrutura simples para seu próximo vídeo.
+        </p>
 
-<button onclick="generateHashtags()">
-Gerar
-</button>
+        <input
+          class="input"
+          id="scriptInput"
+          placeholder="Tema do vídeo"
+        >
 
-</div>
+        <button
+          class="btn btn-primary"
+          onclick="generateScript()"
+        >
+          Criar roteiro
+        </button>
 
-<div class="result" id="hashResult"></div>
+        <div class="result" id="scriptResult">
+          Seu roteiro aparecerá aqui.
+        </div>
 
-</div>
+      </div>
 
+      <!-- CHECKLIST -->
 
-<div class="tool-box">
+      <div class="tool">
 
-<h3>📝 Gerador de roteiro</h3>
+        <h3>✅ Checklist de vídeo</h3>
 
-<p>
-Monte uma estrutura rápida para seu vídeo.
-</p>
+        <p>
+          Confira os principais pontos antes de publicar.
+        </p>
 
-<div class="tool-row">
+        <button
+          class="btn btn-primary"
+          onclick="showChecklist()"
+        >
+          Mostrar checklist
+        </button>
 
-<input
-id="scriptInput"
-placeholder="Tema do vídeo"
->
+        <div class="result" id="checkResult">
+          Clique no botão.
+        </div>
 
-<button onclick="generateScript()">
-Gerar
-</button>
+      </div>
 
-</div>
+      <!-- ANALYTICS -->
 
-<div class="result" id="scriptResult"></div>
+      <div class="tool">
 
-</div>
+        <h3>📊 Análise básica</h3>
+
+        <p>
+          Coloque visualizações e curtidas para calcular a taxa de curtidas.
+        </p>
+
+        <input
+          class="input"
+          type="number"
+          id="viewsInput"
+          placeholder="Visualizações"
+        >
+
+        <input
+          class="input"
+          type="number"
+          id="likesInput"
+          placeholder="Curtidas"
+        >
+
+        <button
+          class="btn btn-primary"
+          onclick="analyzeVideo()"
+        >
+          Analisar
+        </button>
+
+        <div class="result" id="analyticsResult">
+          Resultado aparecerá aqui.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
-
 
 <!-- IA -->
 
 <section id="ia">
 
-<div class="section-title">
+  <div class="container">
 
-<small>Inteligência Artificial</small>
+    <div class="section-title">
 
-<h2>VINLUMEXZ AI</h2>
+      <h2>🤖 VINLUMEXZ AI</h2>
 
-<p>
-Sua assistente para aprender, criar e evoluir.
-</p>
+      <p>
+        Sua assistente para aprender, criar e resolver problemas.
+      </p>
 
-</div>
+    </div>
 
+    <div class="ai-box">
 
-<div class="ai-wrap">
+      <div class="ai-header">
 
-<div class="ai-head">
+        <span class="ai-status"></span>
 
-<div>
+        <div>
+          <strong>VINLUMEXZ AI</strong>
+          <div style="font-size:12px;color:#8f9bb0;">
+            Assistente online
+          </div>
+        </div>
 
-<b>🤖 VINLUMEXZ AI</b>
+      </div>
 
-<div style="color:var(--muted);font-size:13px">
-Assistente inteligente
-</div>
+      <div class="chat" id="chat"></div>
 
-</div>
+      <div class="ai-input">
 
-<div class="ai-status">
+        <input
+          id="chatInput"
+          placeholder="Digite sua mensagem..."
+          autocomplete="off"
+        >
 
-<span class="dot"></span>
+        <button
+          class="btn btn-primary"
+          onclick="sendMessage()"
+        >
+          Enviar
+        </button>
 
-ONLINE
+      </div>
 
-</div>
+    </div>
 
-</div>
-
-
-<div class="chat" id="chat">
-
-<div class="message ai">
-
-👋 Olá! Eu sou a VINLUMEXZ AI.
-
-Posso ajudar você com criação de conteúdo, TikTok, YouTube, edição, IA, Roblox, programação, computadores, tecnologia, estudos e muito mais.
-
-O que você quer aprender?
-
-</div>
-
-</div>
-
-
-<div class="chat-input">
-
-<textarea
-id="chatInput"
-placeholder="Digite sua pergunta..."
-onkeydown="handleChatKey(event)"
-></textarea>
-
-<button class="send" onclick="sendMessage()">
-Enviar
-</button>
-
-</div>
-
-</div>
+  </div>
 
 </section>
-
 
 <!-- GLOSSÁRIO -->
 
 <section id="glossario">
 
-<div class="section-title">
+  <div class="container">
 
-<small>Aprenda os termos</small>
+    <div class="section-title">
 
-<h2>Glossário</h2>
+      <h2>📚 Glossário</h2>
 
-<p>
-Palavras importantes para quem cria conteúdo.
-</p>
+      <p>
+        Termos importantes para quem está começando.
+      </p>
 
-</div>
+    </div>
 
+    <div class="glossary">
 
-<div class="glossary">
+      <div class="term">
+        <strong>Hook</strong>
+        <p>Parte inicial do conteúdo usada para apresentar o assunto e despertar interesse.</p>
+      </div>
 
-<div class="term">
-<b>Hook</b>
-<p>
-Abertura que chama atenção no começo.
-</p>
-</div>
+      <div class="term">
+        <strong>Retenção</strong>
+        <p>Quanto tempo as pessoas continuam assistindo ao conteúdo.</p>
+      </div>
 
-<div class="term">
-<b>Retenção</b>
-<p>
-Quanto tempo as pessoas continuam assistindo.
-</p>
-</div>
+      <div class="term">
+        <strong>CTA</strong>
+        <p>Call to Action: uma chamada para uma ação, como comentar ou seguir.</p>
+      </div>
 
-<div class="term">
-<b>CTA</b>
-<p>
-Call to Action: chamada para uma ação.
-</p>
-</div>
+      <div class="term">
+        <strong>Nicho</strong>
+        <p>Área ou tema específico em que o criador produz conteúdo.</p>
+      </div>
 
-<div class="term">
-<b>Nicho</b>
-<p>
-Área específica de um conteúdo.
-</p>
-</div>
+      <div class="term">
+        <strong>Thumbnail</strong>
+        <p>Imagem de capa usada para representar um vídeo.</p>
+      </div>
 
-<div class="term">
-<b>CTR</b>
-<p>
-Taxa de cliques em relação às impressões.
-</p>
-</div>
+      <div class="term">
+        <strong>Analytics</strong>
+        <p>Dados e métricas usados para analisar o desempenho do conteúdo.</p>
+      </div>
 
-<div class="term">
-<b>Engajamento</b>
-<p>
-Interações como comentários e compartilhamentos.
-</p>
-</div>
+      <div class="term">
+        <strong>A/B Test</strong>
+        <p>Teste entre duas versões para descobrir qual apresenta melhor resultado.</p>
+      </div>
 
-<div class="term">
-<b>Thumbnail</b>
-<p>
-Imagem de capa usada em vídeos.
-</p>
-</div>
+      <div class="term">
+        <strong>Engajamento</strong>
+        <p>Interações como comentários, curtidas, compartilhamentos e salvamentos.</p>
+      </div>
 
-<div class="term">
-<b>A/B Test</b>
-<p>
-Comparação entre duas versões.
-</p>
-</div>
+      <div class="term">
+        <strong>Conversão</strong>
+        <p>Quando uma pessoa realiza uma ação desejada, como cadastro ou compra.</p>
+      </div>
 
-</div>
+    </div>
+
+  </div>
 
 </section>
-
 
 <!-- FAQ -->
 
 <section id="faq">
 
-<div class="section-title">
+  <div class="container">
 
-<small>Dúvidas</small>
+    <div class="section-title">
 
-<h2>FAQ</h2>
+      <h2>❓ Perguntas frequentes</h2>
 
-</div>
+    </div>
 
+    <div class="faq">
 
-<div class="faq">
+      <details>
+        <summary>Preciso ser profissional para começar?</summary>
+        <p>
+          Não. A academia foi feita para começar do básico e evoluir gradualmente.
+        </p>
+      </details>
 
-<button onclick="toggleFaq(this)">
-A VINLUMEXZ promete dinheiro fácil?
-<span>+</span>
-</button>
+      <details>
+        <summary>Preciso de um computador caro?</summary>
+        <p>
+          Não necessariamente. Muitas habilidades de criação podem ser desenvolvidas
+          com equipamentos simples.
+        </p>
+      </details>
 
-<div>
-Não. O objetivo é ensinar habilidades reais.
-Resultados financeiros dependem de vários fatores
-e não são garantidos.
-</div>
+      <details>
+        <summary>As ferramentas garantem que meu vídeo viralize?</summary>
+        <p>
+          Não. Nenhuma ferramenta consegue garantir viralização. O objetivo é ajudar
+          você a produzir conteúdos melhores e analisar seus resultados.
+        </p>
+      </details>
 
-</div>
+      <details>
+        <summary>Como funciona a VINLUMEXZ AI?</summary>
+        <p>
+          O site envia sua conversa para o Worker da Cloudflare, que executa o modelo
+          de inteligência artificial e devolve a resposta para o site.
+        </p>
+      </details>
 
+      <details>
+        <summary>Posso aprender programação aqui?</summary>
+        <p>
+          Sim. A VINLUMEXZ AI pode ajudar com HTML, CSS, JavaScript, Roblox Studio
+          e outros conceitos de programação.
+        </p>
+      </details>
 
-<div class="faq">
+    </div>
 
-<button onclick="toggleFaq(this)">
-Preciso ser profissional para começar?
-<span>+</span>
-</button>
-
-<div>
-Não. A academia foi pensada para começar
-do básico e evoluir gradualmente.
-</div>
-
-</div>
-
-
-<div class="faq">
-
-<button onclick="toggleFaq(this)">
-A IA funciona de verdade?
-<span>+</span>
-</button>
-
-<div>
-Sim. O chat usa o Cloudflare Workers AI através
-do Worker configurado para o VINLUMEXZ.
-</div>
-
-</div>
-
-
-<div class="faq">
-
-<button onclick="toggleFaq(this)">
-Preciso colocar uma API Key no site?
-<span>+</span>
-</button>
-
-<div>
-Não. A chave da IA não fica exposta no código
-do site.
-</div>
-
-</div>
+  </div>
 
 </section>
 
 </main>
 
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container">
+
+    <strong>VINLUMEXZ</strong>
+
+    <p>
+      Aprenda. Crie. Evolua.
+    </p>
+
+    <p style="margin-top:10px;font-size:13px;">
+      © 2026 VINLUMEXZ — Creator Academy
+    </p>
+
+  </div>
+
+</footer>
 
 <!-- MODAL -->
 
 <div class="modal" id="lessonModal">
 
-<div class="modal-box">
+  <div class="modal-content">
 
-<div class="modal-top">
+    <button class="close" onclick="closeLesson()">×</button>
 
-<div>
+    <h2 id="modalTitle"></h2>
 
-<small style="color:var(--cyan)">
-AULA
-</small>
+    <p
+      id="modalDescription"
+      style="color:#9ca9bf;margin-top:8px;"
+    ></p>
 
-<h2 id="modalTitle"></h2>
+    <div class="lesson-list">
 
-</div>
+      <ul id="modalList"></ul>
 
-<button
-class="close"
-onclick="closeLesson()"
->
-✕
-</button>
+    </div>
 
-</div>
+    <button
+      class="btn btn-primary"
+      style="margin-top:20px;"
+      onclick="completeLesson()"
+    >
+      Marcar como concluída
+    </button>
 
-
-<div
-class="lesson-content"
-id="modalContent"
-></div>
-
-
-<button
-class="btn btn-primary"
-style="margin-top:25px;width:100%"
-onclick="completeLesson()"
->
-✓ Marcar como concluída
-</button>
+  </div>
 
 </div>
-
-</div>
-
-
-<footer>
-
-<b>VINLUMEXZ</b> — Creator Academy
-
-<br>
-
-<span>
-Aprenda. Crie. Evolua.
-</span>
-
-</footer>
-
 
 <script>
 
-/* =====================================================
+/* =========================================================
    CONFIGURAÇÃO DA IA
-   ===================================================== */
-
-/*
-   ESTE É O ENDEREÇO DO SEU WORKER.
-
-   NÃO COLOQUE A API KEY DA OPENAI AQUI.
-*/
+   ========================================================= */
 
 const AI_URL =
-"https://vinlumexz-ai.encoumevade.workers.dev";
+  "https://vinlumexz-ai.encoumevade.workers.dev";
 
 
-/* =====================================================
+/* =========================================================
    ACADEMIA
-   ===================================================== */
+   ========================================================= */
 
 const lessons = [
 
-{
-icon:"🎯",
-title:"Nicho",
-text:"Aprenda como escolher um assunto.",
-content:`
-<p><strong>O que é nicho?</strong></p>
-<p>
-Nicho é uma área específica sobre a qual
-você produz conteúdo.
-</p>
-<br>
-<p>
-Exemplo: em vez de falar sobre todos os jogos,
-você pode focar em Roblox.
-</p>
-`
-},
+  {
+    icon:"🎯",
+    title:"Nicho",
+    description:"Descubra sobre o que você realmente quer criar conteúdo.",
+    content:[
+      "Escolha um tema que você consiga estudar e produzir.",
+      "Evite tentar falar sobre absolutamente tudo no começo.",
+      "Observe quais assuntos você gosta e quais problemas consegue resolver."
+    ]
+  },
 
-{
-icon:"👥",
-title:"Público",
-text:"Entenda para quem você cria.",
-content:`
-<p>
-Antes de criar, pense em quem vai assistir,
-o que essa pessoa quer aprender e quais
-problemas ela possui.
-</p>
-`
-},
+  {
+    icon:"👥",
+    title:"Público",
+    description:"Entenda para quem seu conteúdo é feito.",
+    content:[
+      "Defina quem provavelmente terá interesse no seu conteúdo.",
+      "Observe dúvidas e problemas desse público.",
+      "Crie conteúdos que sejam úteis para essas pessoas."
+    ]
+  },
 
-{
-icon:"💡",
-title:"Ideias",
-text:"Transforme assuntos em conteúdos.",
-content:`
-<p>
-Use perguntas, tutoriais, listas, comparações,
-erros comuns, novidades e experiências próprias
-para criar ideias.
-</p>
-`
-},
+  {
+    icon:"💡",
+    title:"Ideias",
+    description:"Aprenda a encontrar ideias constantemente.",
+    content:[
+      "Anote perguntas que aparecem no seu nicho.",
+      "Transforme problemas em vídeos.",
+      "Use comentários e tendências como fontes de pesquisa.",
+      "Não copie outros criadores; use ideias como referência."
+    ]
+  },
 
-{
-icon:"🪝",
-title:"Hooks",
-text:"Crie boas aberturas.",
-content:`
-<p>
-Os primeiros segundos precisam deixar claro
-por que vale a pena continuar assistindo.
-</p>
-`
-},
+  {
+    icon:"🎣",
+    title:"Hooks",
+    description:"Aprenda a começar seus vídeos de forma interessante.",
+    content:[
+      "Apresente rapidamente o assunto.",
+      "Crie curiosidade sem mentir.",
+      "Mostre claramente o que a pessoa pode aprender."
+    ]
+  },
 
-{
-icon:"⏱️",
-title:"Retenção",
-text:"Mantenha o interesse do público.",
-content:`
-<p>
-Use ritmo, informações relevantes, exemplos
-e uma progressão clara.
-</p>
-`
-},
+  {
+    icon:"⏱️",
+    title:"Retenção",
+    description:"Aprenda a manter o conteúdo interessante.",
+    content:[
+      "Evite introduções desnecessariamente longas.",
+      "Mude visual, exemplo ou informação quando fizer sentido.",
+      "Entregue o valor prometido.",
+      "Use curiosidade de maneira honesta."
+    ]
+  },
 
-{
-icon:"📝",
-title:"Roteiros",
-text:"Crie estruturas para vídeos.",
-content:`
-<p>
-<strong>1. Hook</strong><br>
-<strong>2. Desenvolvimento</strong><br>
-<strong>3. Payoff</strong><br>
-<strong>4. CTA</strong>
-</p>
-`
-},
+  {
+    icon:"📝",
+    title:"Roteiros",
+    description:"Estruture seus vídeos.",
+    content:[
+      "Hook.",
+      "Contexto.",
+      "Desenvolvimento.",
+      "Exemplo ou demonstração.",
+      "Conclusão e CTA."
+    ]
+  },
 
-{
-icon:"✂️",
-title:"Edição",
-text:"Aprenda princípios de edição.",
-content:`
-<p>
-Priorize áudio claro, cortes úteis, ritmo,
-textos legíveis e imagens relevantes.
-</p>
-`
-},
+  {
+    icon:"✂️",
+    title:"Edição",
+    description:"Aprenda os fundamentos da edição.",
+    content:[
+      "Remova partes desnecessárias.",
+      "Use cortes para manter o ritmo.",
+      "Adicione texto quando ele ajudar a compreensão.",
+      "Não coloque efeitos apenas por colocar."
+    ]
+  },
 
-{
-icon:"🖼️",
-title:"Capas",
-text:"Crie thumbnails melhores.",
-content:`
-<p>
-Uma boa capa precisa ser fácil de entender
-rapidamente e ter relação direta com o conteúdo.
-</p>
-`
-},
+  {
+    icon:"🖼️",
+    title:"Capas",
+    description:"Crie capas claras e fáceis de entender.",
+    content:[
+      "Use um elemento principal.",
+      "Evite excesso de texto.",
+      "Garanta contraste.",
+      "A capa deve representar o conteúdo real."
+    ]
+  },
 
-{
-icon:"#️⃣",
-title:"Hashtags",
-text:"Use hashtags corretamente.",
-content:`
-<p>
-Prefira hashtags relacionadas ao assunto.
-Evite spam e hashtags aleatórias.
-</p>
-`
-},
+  {
+    icon:"#️⃣",
+    title:"Hashtags",
+    description:"Use hashtags de maneira estratégica.",
+    content:[
+      "Escolha hashtags relacionadas ao conteúdo.",
+      "Misture termos específicos e gerais quando fizer sentido.",
+      "Evite spam de hashtags.",
+      "Não trate hashtags como garantia de alcance."
+    ]
+  },
 
-{
-icon:"💬",
-title:"Engajamento",
-text:"Construa sua comunidade.",
-content:`
-<p>
-Responda comentários, observe perguntas
-e transforme dúvidas em novos conteúdos.
-</p>
-`
-},
+  {
+    icon:"💬",
+    title:"Engajamento",
+    description:"Aprenda a construir uma comunidade.",
+    content:[
+      "Responda comentários.",
+      "Faça perguntas relevantes.",
+      "Observe quais assuntos geram conversas.",
+      "Valorize sua comunidade."
+    ]
+  },
 
-{
-icon:"📊",
-title:"Analytics",
-text:"Use dados para melhorar.",
-content:`
-<p>
-Observe visualizações, retenção, tempo assistido,
-cliques e interações.
-</p>
-`
-},
+  {
+    icon:"📊",
+    title:"Analytics",
+    description:"Aprenda a interpretar seus dados.",
+    content:[
+      "Observe visualizações.",
+      "Observe retenção quando a plataforma disponibilizar.",
+      "Observe curtidas, comentários e compartilhamentos.",
+      "Compare conteúdos semelhantes.",
+      "Use dados para testar novas ideias."
+    ]
+  },
 
-{
-icon:"🧪",
-title:"Testes",
-text:"Compare versões.",
-content:`
-<p>
-Teste diferentes hooks, títulos, capas ou
-estruturas e compare os resultados.
-</p>
-`
-},
+  {
+    icon:"🧪",
+    title:"Testes",
+    description:"Teste diferentes versões do seu conteúdo.",
+    content:[
+      "Teste diferentes hooks.",
+      "Teste diferentes capas quando possível.",
+      "Compare formatos.",
+      "Mude uma variável por vez quando quiser entender a causa."
+    ]
+  },
 
-{
-icon:"🤖",
-title:"IA",
-text:"Use inteligência artificial.",
-content:`
-<p>
-IA pode ajudar com brainstorming, roteiros,
-organização, programação e aprendizado.
-</p>
-`
-},
+  {
+    icon:"🤖",
+    title:"IA",
+    description:"Use inteligência artificial como ferramenta.",
+    content:[
+      "Use IA para brainstorming.",
+      "Peça variações de roteiro.",
+      "Use IA para estudar conceitos.",
+      "Confira informações importantes antes de publicá-las."
+    ]
+  },
 
-{
-icon:"💼",
-title:"Vendas",
-text:"Aprenda fundamentos de vendas.",
-content:`
-<p>
-Entenda o problema do cliente, explique o valor
-da solução e seja transparente.
-</p>
-`
-},
+  {
+    icon:"💰",
+    title:"Vendas",
+    description:"Aprenda fundamentos de marketing e vendas.",
+    content:[
+      "Entenda o problema que você resolve.",
+      "Explique claramente sua oferta.",
+      "Seja transparente sobre preço e condições.",
+      "Não prometa resultados garantidos."
+    ]
+  },
 
-{
-icon:"⚠️",
-title:"Erros",
-text:"Conheça erros comuns.",
-content:`
-<p>
-Evite copiar tudo de outros criadores,
-publicar sem analisar resultados e acreditar
-em promessas de viralização garantida.
-</p>
-`
-}
+  {
+    icon:"⚠️",
+    title:"Erros",
+    description:"Conheça erros comuns de criadores iniciantes.",
+    content:[
+      "Copiar conteúdo sem entender o motivo.",
+      "Mudar de nicho constantemente.",
+      "Desistir cedo demais.",
+      "Ignorar métricas.",
+      "Acreditar em promessas de dinheiro fácil."
+    ]
+  }
 
 ];
 
-
 let currentLesson = 0;
 
-const academyGrid =
-document.getElementById("academyGrid");
+const completedLessons =
+  JSON.parse(
+    localStorage.getItem("vinlumexz_completed") || "[]"
+  );
 
 
-lessons.forEach((lesson,index)=>{
+function renderAcademy(){
 
-const card =
-document.createElement("div");
+  const grid =
+    document.getElementById("academyGrid");
 
-card.className = "card";
+  grid.innerHTML = "";
 
-card.innerHTML = `
+  lessons.forEach((lesson,index)=>{
 
-<div class="icon">
-${lesson.icon}
-</div>
+    const done =
+      completedLessons.includes(index);
 
-<h3>
-${lesson.title}
-</h3>
+    const card =
+      document.createElement("div");
 
-<p>
-${lesson.text}
-</p>
+    card.className = "card";
 
-<button onclick="openLesson(${index})">
-Ver aula
-</button>
+    card.innerHTML = `
 
-`;
+      <div class="icon">${lesson.icon}</div>
 
-academyGrid.appendChild(card);
+      <h3>${lesson.title}</h3>
 
-});
+      <p>${lesson.description}</p>
 
+      <button
+        class="btn ${done ? "btn-secondary" : "btn-primary"}"
+        onclick="openLesson(${index})"
+      >
+        ${done ? "✓ Concluída" : "Estudar"}
+      </button>
 
-/* =====================================================
-   PROGRESSO
-   ===================================================== */
+    `;
 
-let completed =
-JSON.parse(
-localStorage.getItem(
-"vinlumexz_completed"
-) || "[]"
-);
+    grid.appendChild(card);
 
+  });
 
-function updateProgress(){
-
-const count =
-completed.length;
-
-document.getElementById(
-"completedCount"
-).textContent =
-`${count}/${lessons.length}`;
-
-
-const percentage =
-Math.round(
-(count / lessons.length) * 100
-);
-
-
-document.getElementById(
-"progressBar"
-).style.width =
-percentage + "%";
-
-
-let level = "NOOB";
-
-if(percentage >= 100)
-level = "PRO";
-
-else if(percentage >= 75)
-level = "AVANÇADO";
-
-else if(percentage >= 50)
-level = "INTERMEDIÁRIO";
-
-else if(percentage >= 25)
-level = "INICIANTE";
-
-
-document.getElementById(
-"levelText"
-).textContent =
-level;
-
+  updateProgress();
 }
-
-
-updateProgress();
 
 
 function openLesson(index){
 
-currentLesson = index;
+  currentLesson = index;
 
-document.getElementById(
-"modalTitle"
-).textContent =
-lessons[index].title;
+  const lesson = lessons[index];
 
-document.getElementById(
-"modalContent"
-).innerHTML =
-lessons[index].content;
+  document.getElementById("modalTitle").textContent =
+    lesson.icon + " " + lesson.title;
 
-document.getElementById(
-"lessonModal"
-).classList.add("show");
+  document.getElementById("modalDescription").textContent =
+    lesson.description;
 
+  const list =
+    document.getElementById("modalList");
+
+  list.innerHTML = "";
+
+  lesson.content.forEach(item=>{
+
+    const li =
+      document.createElement("li");
+
+    li.textContent = item;
+
+    list.appendChild(li);
+
+  });
+
+  document
+    .getElementById("lessonModal")
+    .classList.add("active");
 }
 
 
 function closeLesson(){
 
-document.getElementById(
-"lessonModal"
-).classList.remove("show");
-
+  document
+    .getElementById("lessonModal")
+    .classList.remove("active");
 }
 
 
 function completeLesson(){
 
-if(!completed.includes(currentLesson)){
+  if(!completedLessons.includes(currentLesson)){
 
-completed.push(currentLesson);
+    completedLessons.push(currentLesson);
 
-localStorage.setItem(
-"vinlumexz_completed",
-JSON.stringify(completed)
-);
+    localStorage.setItem(
+      "vinlumexz_completed",
+      JSON.stringify(completedLessons)
+    );
 
-}
+  }
 
-updateProgress();
+  renderAcademy();
 
-closeLesson();
-
-}
-
-
-/* =====================================================
-   FERRAMENTAS
-   ===================================================== */
-
-function showResult(id,text){
-
-const el =
-document.getElementById(id);
-
-el.style.display = "block";
-
-el.textContent = text;
+  closeLesson();
 
 }
 
+
+function updateProgress(){
+
+  const total = lessons.length;
+
+  const done = completedLessons.length;
+
+  const percent =
+    Math.round((done / total) * 100);
+
+  document.getElementById("progressFill").style.width =
+    percent + "%";
+
+  document.getElementById("progressText").textContent =
+    percent + "%";
+
+  let level = "Noob";
+
+  if(percent >= 25) level = "Iniciante";
+  if(percent >= 50) level = "Intermediário";
+  if(percent >= 75) level = "Avançado";
+  if(percent >= 100) level = "PRO";
+
+  document.getElementById("levelText").textContent =
+    "Nível: " + level;
+}
+
+
+/* =========================================================
+   GERADOR DE IDEIAS
+   ========================================================= */
 
 function generateIdeas(){
 
-const niche =
-document.getElementById(
-"ideaInput"
-).value.trim()
-|| "tecnologia";
+  const topic =
+    document.getElementById("ideaInput")
+    .value.trim();
 
+  if(!topic){
 
-const ideas = [
+    document.getElementById("ideaResult").textContent =
+      "Digite um nicho primeiro.";
 
-`5 coisas que você precisa saber sobre ${niche}`,
+    return;
+  }
 
-`O maior erro que iniciantes cometem em ${niche}`,
+  const ideas = [
 
-`Tutorial de ${niche} para iniciantes`,
+    `5 coisas que você precisa saber sobre ${topic}`,
 
-`3 dicas que melhoraram meu conteúdo sobre ${niche}`,
+    `O erro que quase todo iniciante comete em ${topic}`,
 
-`Eu testei isso em ${niche} e aconteceu isso`,
+    `Como começar com ${topic} do zero`,
 
-`O que ninguém explica sobre ${niche}`,
+    `3 dicas de ${topic} que realmente ajudam`,
 
-`Guia de ${niche} para iniciantes`
+    `Eu testei isso em ${topic} e descobri uma coisa importante`,
 
-];
+    `Guia rápido de ${topic} para iniciantes`,
 
+    `O que ninguém te explica sobre ${topic}`,
 
-showResult(
-"ideaResult",
-ideas.map(
-(x,i)=>`${i+1}. ${x}`
-).join("\n")
-);
+    `Antes de começar em ${topic}, veja isso`
+
+  ];
+
+  document.getElementById("ideaResult").textContent =
+    ideas.map((x,i)=>(i+1)+". "+x).join("\n\n");
 
 }
 
+
+/* =========================================================
+   GERADOR DE HOOKS
+   ========================================================= */
 
 function generateHooks(){
 
-const topic =
-document.getElementById(
-"hookInput"
-).value.trim()
-|| "esse assunto";
+  const topic =
+    document.getElementById("hookInput")
+    .value.trim();
 
+  if(!topic){
 
-const hooks = [
+    document.getElementById("hookResult").textContent =
+      "Digite o tema primeiro.";
 
-`Você provavelmente está fazendo isso errado em ${topic}.`,
+    return;
+  }
 
-`Antes de começar com ${topic}, veja isso.`,
+  const hooks = [
 
-`Eu queria ter descoberto isso antes de começar ${topic}.`,
+    `Se você está começando em ${topic}, presta atenção nisso.`,
 
-`3 coisas que eu faria diferente em ${topic}.`,
+    `Eu gostaria de ter descoberto isso antes de começar com ${topic}.`,
 
-`Se você está começando em ${topic}, presta atenção.`,
+    `Antes de tentar ${topic}, você precisa entender isso.`,
 
-`Essa é uma das coisas mais importantes sobre ${topic}.`
+    `3 coisas que podem facilitar sua vida com ${topic}.`,
 
-];
+    `Você provavelmente está cometendo este erro em ${topic}.`,
 
+    `Vou te mostrar uma forma simples de começar com ${topic}.`
 
-showResult(
-"hookResult",
-hooks.map(
-(x,i)=>`${i+1}. ${x}`
-).join("\n")
-);
+  ];
+
+  document.getElementById("hookResult").textContent =
+    hooks.map((x,i)=>(i+1)+". "+x).join("\n\n");
 
 }
 
+
+/* =========================================================
+   HASHTAGS
+   ========================================================= */
 
 function generateHashtags(){
 
-const topic =
-document.getElementById(
-"hashInput"
-).value.trim()
-|| "criacao de conteudo";
+  const topic =
+    document.getElementById("hashInput")
+    .value.trim()
+    .toLowerCase();
 
+  if(!topic){
 
-const words =
-topic
-.toLowerCase()
-.replace(/[^a-z0-9áéíóúãõç ]/gi,"")
-.split(" ")
-.filter(Boolean)
-.slice(0,3);
+    document.getElementById("hashResult").textContent =
+      "Digite o tema primeiro.";
 
+    return;
+  }
 
-const tags = [
+  const clean =
+    topic
+      .replace(/[^\p{L}\p{N}\s]/gu,"")
+      .replace(/\s+/g,"");
 
-...words.map(
-x=>"#"+x
-),
+  const hashtags = [
 
-"#criacaodeconteudo",
-"#dicas",
-"#tutorial",
-"#conteudo"
+    "#" + clean,
 
-];
+    "#criacaodeconteudo",
 
+    "#conteudo",
 
-showResult(
-"hashResult",
-[...new Set(tags)].join(" ")
-);
+    "#dicas",
+
+    "#tutorial",
+
+    "#aprenda",
+
+    "#criador",
+
+    "#brasil"
+
+  ];
+
+  document.getElementById("hashResult").textContent =
+    hashtags.join(" ");
 
 }
 
+
+/* =========================================================
+   GERADOR DE ROTEIRO
+   ========================================================= */
 
 function generateScript(){
 
-const topic =
-document.getElementById(
-"scriptInput"
-).value.trim()
-|| "meu tema";
+  const topic =
+    document.getElementById("scriptInput")
+    .value.trim();
 
+  if(!topic){
 
-const script = `
+    document.getElementById("scriptResult").textContent =
+      "Digite o tema do vídeo primeiro.";
+
+    return;
+  }
+
+  const script =
+
+`ROTEIRO — ${topic}
 
 HOOK:
-"Você quer aprender sobre ${topic}? Então presta atenção."
+"Se você quer aprender ${topic}, veja isso antes."
+
+CONTEXTO:
+Explique rapidamente o que será mostrado e por que isso é útil.
 
 DESENVOLVIMENTO:
+1. Apresente o primeiro ponto.
+2. Mostre um exemplo.
+3. Explique o segundo ponto.
+4. Mostre outro exemplo.
+5. Resuma a parte mais importante.
 
-Explique rapidamente qual é o problema ou dúvida.
-
-Depois entregue 3 informações úteis:
-
-1. Primeiro ponto importante.
-2. Segundo ponto importante.
-3. Terceiro ponto importante.
-
-PAYOFF:
-
-Resuma a principal lição do vídeo.
+CONCLUSÃO:
+Recapitule o principal aprendizado.
 
 CTA:
+"Se isso te ajudou, acompanhe a VINLUMEXZ para mais conteúdos."`;
 
-Se esse conteúdo ajudou,
-confira os próximos conteúdos da VINLUMEXZ.
-
-`;
-
-
-showResult(
-"scriptResult",
-script.trim()
-);
+  document.getElementById("scriptResult").textContent =
+    script;
 
 }
 
 
-/* =====================================================
-   CHAT DA IA
-   ===================================================== */
+/* =========================================================
+   CHECKLIST
+   ========================================================= */
 
-const chat =
-document.getElementById("chat");
+function showChecklist(){
 
+  const checklist =
+
+`☐ O vídeo tem um objetivo claro?
+☐ O começo apresenta rapidamente o assunto?
+☐ O conteúdo realmente entrega o que promete?
+☐ Cortei partes desnecessárias?
+☐ O áudio está compreensível?
+☐ O texto na tela está legível?
+☐ A capa representa o conteúdo?
+☐ As hashtags são relevantes?
+☐ Revisei o vídeo antes de publicar?
+☐ Tenho alguma métrica para analisar depois?`;
+
+  document.getElementById("checkResult").textContent =
+    checklist;
+
+}
+
+
+/* =========================================================
+   ANALYTICS
+   ========================================================= */
+
+function analyzeVideo(){
+
+  const views =
+    Number(
+      document.getElementById("viewsInput").value
+    );
+
+  const likes =
+    Number(
+      document.getElementById("likesInput").value
+    );
+
+  if(!views || views <= 0){
+
+    document.getElementById("analyticsResult").textContent =
+      "Digite uma quantidade válida de visualizações.";
+
+    return;
+  }
+
+  if(likes < 0){
+
+    document.getElementById("analyticsResult").textContent =
+      "Digite uma quantidade válida de curtidas.";
+
+    return;
+  }
+
+  const rate =
+    (likes / views) * 100;
+
+  document.getElementById("analyticsResult").textContent =
+
+`Visualizações: ${views.toLocaleString("pt-BR")}
+
+Curtidas: ${likes.toLocaleString("pt-BR")}
+
+Taxa de curtidas:
+${rate.toFixed(2)}%
+
+Essa métrica é apenas um indicador. Para avaliar um conteúdo de forma mais completa, observe também retenção, comentários, compartilhamentos, salvamentos e outras métricas disponíveis na plataforma.`;
+
+}
+
+
+/* =========================================================
+   VINLUMEXZ AI
+   ========================================================= */
 
 let chatHistory =
-JSON.parse(
-localStorage.getItem(
-"vinlumexz_ai_history"
-) || "[]"
-);
+  JSON.parse(
+    localStorage.getItem("vinlumexz_chat") || "[]"
+  );
 
 
-/*
-   Adiciona mensagem ao chat.
-*/
+function addMessage(role,text){
 
-function addMessage(
-type,
-text,
-save = true
-){
+  const chat =
+    document.getElementById("chat");
 
-const message =
-document.createElement("div");
+  const message =
+    document.createElement("div");
 
-message.className =
-`message ${type}`;
+  message.className =
+    "message " + role;
 
-message.textContent =
-text;
+  const bubble =
+    document.createElement("div");
 
-chat.appendChild(message);
+  bubble.className = "bubble";
 
-chat.scrollTop =
-chat.scrollHeight;
+  bubble.textContent = text;
 
+  message.appendChild(bubble);
 
-if(
-save &&
-(type === "user" ||
-type === "ai")
-){
+  chat.appendChild(message);
 
-chatHistory.push({
-
-role:
-type === "user"
-? "user"
-: "assistant",
-
-content:text
-
-});
+  chat.scrollTop = chat.scrollHeight;
+}
 
 
-chatHistory =
-chatHistory.slice(-20);
+function saveChat(){
 
-
-localStorage.setItem(
-"vinlumexz_ai_history",
-JSON.stringify(chatHistory)
-);
+  localStorage.setItem(
+    "vinlumexz_chat",
+    JSON.stringify(chatHistory.slice(-30))
+  );
 
 }
 
 
-return message;
+function renderChat(){
+
+  const chat =
+    document.getElementById("chat");
+
+  chat.innerHTML = "";
+
+  if(chatHistory.length === 0){
+
+    addMessage(
+      "assistant",
+      "E aí! 👋 Eu sou a VINLUMEXZ AI. Posso te ajudar com criação de conteúdo, Roblox, programação, tecnologia, IA, edição e muito mais."
+    );
+
+    return;
+  }
+
+  chatHistory.forEach(message=>{
+
+    addMessage(
+      message.role === "user"
+        ? "user"
+        : "assistant",
+      message.content
+    );
+
+  });
 
 }
 
-
-/*
-   Recupera histórico salvo.
-*/
-
-function loadChatHistory(){
-
-if(!chatHistory.length)
-return;
-
-
-chatHistory
-.slice(-12)
-.forEach(message=>{
-
-addMessage(
-
-message.role === "user"
-? "user"
-: "ai",
-
-message.content,
-
-false
-
-);
-
-});
-
-}
-
-
-/*
-   ENTER envia.
-   SHIFT + ENTER cria nova linha.
-*/
-
-function handleChatKey(event){
-
-if(
-event.key === "Enter" &&
-!event.shiftKey
-){
-
-event.preventDefault();
-
-sendMessage();
-
-}
-
-}
-
-
-/*
-   ENVIA PARA O CLOUDFLARE WORKER
-*/
 
 async function sendMessage(){
 
-const input =
-document.getElementById(
-"chatInput"
-);
+  const input =
+    document.getElementById("chatInput");
 
-const text =
-input.value.trim();
+  const text =
+    input.value.trim();
 
+  if(!text) return;
 
-if(!text)
-return;
+  input.value = "";
 
+  chatHistory.push({
+    role:"user",
+    content:text
+  });
 
-/*
-   Mostra mensagem do usuário.
-*/
+  addMessage("user",text);
 
-addMessage(
-"user",
-text
-);
+  saveChat();
 
+  const loading =
+    document.createElement("div");
 
-input.value = "";
+  loading.className =
+    "message assistant";
 
+  loading.id = "aiLoading";
 
-/*
-   Mostra carregando.
-*/
+  loading.innerHTML =
+    '<div class="bubble">Pensando...</div>';
 
-const typing =
-addMessage(
-"system",
-"🤖 VINLUMEXZ AI está pensando...",
-false
-);
+  document
+    .getElementById("chat")
+    .appendChild(loading);
 
+  document
+    .getElementById("chat")
+    .scrollTop =
+    document.getElementById("chat").scrollHeight;
 
-try{
+  try{
 
+    const response =
+      await fetch(AI_URL,{
+        method:"POST",
 
-const response =
-await fetch(
-AI_URL,
-{
+        headers:{
+          "Content-Type":"application/json"
+        },
 
-method:"POST",
+        body:JSON.stringify({
+          messages:chatHistory.slice(-20)
+        })
+      });
 
-headers:{
-"Content-Type":
-"application/json"
-},
+    const data =
+      await response.json();
 
-body:
-JSON.stringify({
+    const loadingElement =
+      document.getElementById("aiLoading");
 
-messages:
-chatHistory
-.filter(
-x =>
-x.role === "user" ||
-x.role === "assistant"
-)
-.slice(-20)
+    if(loadingElement){
+      loadingElement.remove();
+    }
 
-})
+    if(!response.ok){
 
-}
-);
+      throw new Error(
+        data.error || "Erro no Worker."
+      );
 
+    }
 
-const data =
-await response.json();
+    const answer =
+      data.response ||
+      data.text ||
+      "A IA não retornou uma resposta.";
 
+    chatHistory.push({
+      role:"assistant",
+      content:answer
+    });
 
-typing.remove();
+    saveChat();
 
+    addMessage(
+      "assistant",
+      answer
+    );
 
-if(!response.ok){
+  }catch(error){
 
-throw new Error(
-data?.error ||
-"Erro no servidor da IA."
-);
+    const loadingElement =
+      document.getElementById("aiLoading");
 
-}
+    if(loadingElement){
+      loadingElement.remove();
+    }
 
+    const errorMessage =
+      "❌ Não consegui conectar à IA agora.\n\n" +
+      "Verifique se o Worker da Cloudflare está publicado e tente novamente.";
 
-if(!data.response){
+    chatHistory.push({
+      role:"assistant",
+      content:errorMessage
+    });
 
-throw new Error(
-"A IA não retornou resposta."
-);
+    saveChat();
 
-}
+    addMessage(
+      "assistant",
+      errorMessage
+    );
 
+    console.error(error);
 
-/*
-   Mostra resposta da IA.
-*/
-
-addMessage(
-"ai",
-data.response
-);
-
-
-}catch(error){
-
-typing.remove();
-
-
-addMessage(
-"ai",
-"❌ Não consegui conectar à IA agora. Verifique se o Worker do Cloudflare está publicado e tente novamente."
-);
-
-
-console.error(error);
-
-}
+  }
 
 }
 
 
-/* =====================================================
-   FAQ
-   ===================================================== */
-
-function toggleFaq(button){
-
-const faq =
-button.parentElement;
-
-faq.classList.toggle("open");
-
-
-const symbol =
-button.querySelector("span");
-
-
-symbol.textContent =
-faq.classList.contains("open")
-? "−"
-: "+";
-
-}
-
-
-/* =====================================================
-   FECHAR MODAL CLICANDO FORA
-   ===================================================== */
+/* ENTER PARA ENVIAR */
 
 document
-.getElementById("lessonModal")
-.addEventListener(
-"click",
-function(event){
+  .getElementById("chatInput")
+  .addEventListener("keydown",function(event){
 
-if(event.target === this){
+    if(event.key === "Enter"){
 
-closeLesson();
+      event.preventDefault();
+
+      sendMessage();
+
+    }
+
+  });
+
+
+/* =========================================================
+   MENU MOBILE
+   ========================================================= */
+
+function toggleMenu(){
+
+  const nav =
+    document.querySelector(".nav-links");
+
+  if(nav.style.display === "flex"){
+
+    nav.style.display = "";
+
+  }else{
+
+    nav.style.display = "flex";
+    nav.style.flexDirection = "column";
+    nav.style.position = "absolute";
+    nav.style.top = "72px";
+    nav.style.left = "0";
+    nav.style.right = "0";
+    nav.style.padding = "20px";
+    nav.style.background = "#070b13";
+    nav.style.borderBottom = "1px solid rgba(255,255,255,.09)";
+
+  }
 
 }
 
-}
-);
+
+/* =========================================================
+   FECHAR MODAL CLICANDO FORA
+   ========================================================= */
+
+document
+  .getElementById("lessonModal")
+  .addEventListener("click",function(event){
+
+    if(event.target === this){
+      closeLesson();
+    }
+
+  });
 
 
-/* =====================================================
+/* =========================================================
    INICIALIZAÇÃO
-   ===================================================== */
+   ========================================================= */
 
-loadChatHistory();
+renderAcademy();
+
+renderChat();
 
 </script>
 
